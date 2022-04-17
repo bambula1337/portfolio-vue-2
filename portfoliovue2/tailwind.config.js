@@ -64,6 +64,7 @@ module.exports = {
       20: '5rem',
       22: '5.5rem',
       24: '6rem',
+      26: '6.5rem',
       28: '7rem',
       32: '8rem',
       34: '8.5rem',
@@ -96,15 +97,9 @@ module.exports = {
       220: '55rem',
       300: '75rem',
       600: '150rem',
-      '19rem': '19rem',
-      '10proc': '10%',
-      '17/100': '17%',
-      '40proc': '40%',
-      '3/5': '60%',
-      '7/10': '0.7rem',
-      '28.7rem': '28.7rem',
-      '0proc': '0%',
-      '55proc': '55%'
+      '1/20': '5%',
+      '13/100': '13%',
+      '3/10': '30%', 
     },
     animation: {
       none: 'none',
@@ -309,6 +304,10 @@ module.exports = {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
+      ],
+      poppins: [
+        'Poppins',
+        'sans-serif'
       ],
       serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
