@@ -3,6 +3,7 @@
     <Info/>
     <About/>
     <Skills/>
+    <Services/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Info from '@/components/Info.vue';
 import About from '@/components/About/AboutMain.vue';
 import Skills from '@/components/Skills/SkillsMain.vue';
+import Services from '@/components/Services.vue';
 
 
 export default {
@@ -18,6 +20,7 @@ export default {
     Info,
     About,
     Skills,
+    Services,
   }
 };
 </script>
