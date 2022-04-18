@@ -103,9 +103,9 @@ export default {
     & .bottom {
       @apply flex items-center flex-col;
       & .stats {
-        @apply flex justify-between mt-10;
+        @apply flex mt-10 justify-between;
         & .stat-card {
-          @apply flex flex-col justify-center items-center text-center;
+          @apply flex flex-col items-center text-center w-3/10;
           & .card-number {
             @apply font-poppins font-semibold text-2xl;
           }
