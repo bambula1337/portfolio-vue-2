@@ -7,13 +7,22 @@
         <p class="text">
           {{ card.text }}
         </p>
-        <div class="link" @click="openModal(card.modalProps.mainText, card.modalProps.abilities)">
+        <div
+          class="link"
+          @click="
+            openModal(card.modalProps.mainText, card.modalProps.abilities)
+          "
+        >
           <p class="link-text">View More</p>
           <i class="uil uil-arrow-right link-icon"></i>
         </div>
       </div>
     </div>
-    <div class="services-modal" @click="closeModal" :class="[Modal.isOpened ? 'flex' : 'hidden']">
+    <div
+      class="services-modal"
+      @click="closeModal"
+      :class="[Modal.isOpened ? 'flex' : 'hidden']"
+    >
       <div class="modal-card">
         <div class="top">
           <p class="text">
@@ -22,9 +31,13 @@
           <i class="uil uil-multiply icon" @click="closeModal"></i>
         </div>
         <div class="bottom">
-          <div class="ability-card" v-for="(ability, index) in Modal.abilities" :key="index">
+          <div
+            class="ability-card"
+            v-for="(ability, index) in Modal.abilities"
+            :key="index"
+          >
             <i class="uil uil-check icon"></i>
-            <p class="text"> {{ability.text}} </p>
+            <p class="text">{{ ability.text }}</p>
           </div>
         </div>
       </div>
@@ -41,18 +54,21 @@ export default {
     WelcomeText,
   },
   methods: {
-    openModal: function(text, abilities){
+    openModal: function (text, abilities) {
       this.Modal.isOpened = true;
       this.Modal.mainText = text;
       this.Modal.abilities = abilities;
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     },
-    closeModal: function(event){
-      if(event.target.matches('.services-modal') || event.target.matches('.icon')){
+    closeModal: function (event) {
+      if (
+        event.target.matches(".services-modal") ||
+        event.target.matches(".icon")
+      ) {
         this.Modal.isOpened = false;
-        document.body.style.overflow = 'scroll';
+        document.body.style.overflow = "scroll";
       }
-    }
+    },
   },
   data() {
     return {
@@ -163,8 +179,8 @@ export default {
         & .link-icon {
           @apply text-xl -mb-0.5 ml-2 transition-all duration-300;
         }
-        &:hover{
-          & .link-icon{
+        &:hover {
+          & .link-icon {
             @apply ml-3;
           }
         }
@@ -175,9 +191,13 @@ export default {
   & .services-modal {
     @apply w-screen h-screen justify-center items-center fixed top-0 left-0;
     background-color: rgba(128, 128, 128, 0.337);
+    animation-name: modal-main-reveal;
+    animation-duration: 400ms;
 
     & .modal-card {
       @apply w-72 bg-white rounded-lg p-5 flex flex-col justify-between;
+      animation-name: modal-card-reveal;
+      animation-duration: 400ms;
       & .top {
         @apply flex justify-between relative mb-5;
         & .text {
@@ -185,6 +205,10 @@ export default {
         & .icon {
           @apply text-gray-500 cursor-pointer transition-all duration-300 text-xl;
           @apply hover:text-black;
+
+          &:hover{
+            transform: rotateY(180deg);
+          }
         }
       }
       & .bottom {
@@ -200,6 +224,23 @@ export default {
         }
       }
     }
+  }
+}
+
+@keyframes modal-main-reveal {
+  from {
+    background-color: rgba(128, 128, 128, 0);
+  }
+  to {
+    background-color: rgba(128, 128, 128, 0.337);
+  }
+}
+@keyframes modal-card-reveal {
+  from {
+    transform: translateY(20rem);
+  }
+  to {
+    transform: translateY(0rem);
   }
 }
 </style>
