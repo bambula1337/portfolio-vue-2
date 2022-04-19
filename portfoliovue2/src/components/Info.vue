@@ -62,7 +62,10 @@ export default {
     & .icons{
       @apply flex flex-col -mb-5 mr-13/100;
       & .icon{
-        @apply mb-4 text-xl text-purple-600;
+        @apply mb-4 text-xl text-purple-600 cursor-pointer transition-all duration-300;
+        &:hover{
+          @apply text-purple-400;
+        }
       }
     }
     & .image{
@@ -88,12 +91,15 @@ export default {
       @apply text-gray-500;
     }
     & .contact-button{
+      &:hover .icon{
+        @apply ml-3;
+      }
       @apply bg-purple-600 flex h-14 px-3 items-center rounded-lg mt-7;
       & .text{
         @apply text-white font-medium;
       }
       & .icon{
-        @apply text-white ml-2 text-xl;
+        @apply text-white ml-2 text-xl transition-all duration-300;
       }
     }
   }

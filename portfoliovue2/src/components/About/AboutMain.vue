@@ -115,12 +115,15 @@ export default {
         }
       }
       & .download {
+        &:hover .icon{
+          @apply mt-0;
+        }
         @apply bg-purple-600 flex h-14 px-3 items-center rounded-lg mt-7;
         & .text {
           @apply text-white font-medium;
         }
         & .icon {
-          @apply text-white ml-2 -mt-1 text-xl;
+          @apply text-white ml-2 -mt-1 text-xl transition-all duration-300;
         }
       }
     }
