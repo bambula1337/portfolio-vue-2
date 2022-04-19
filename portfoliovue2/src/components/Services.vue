@@ -58,7 +58,7 @@ export default {
       this.Modal.isOpened = true;
       this.Modal.mainText = text;
       this.Modal.abilities = abilities;
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     },
     closeModal: function (event) {
       if (
@@ -66,7 +66,9 @@ export default {
         event.target.matches(".icon")
       ) {
         this.Modal.isOpened = false;
-        document.body.style.overflow = "scroll";
+        document.body.style.overflowY = "scroll";
+        document.body.style.overflowX = "hidden";
+        console.dir(document.body.style);
       }
     },
   },
@@ -203,8 +205,10 @@ export default {
         & .text {
         }
         & .icon {
-          @apply text-gray-500 cursor-pointer transition-all duration-300 text-xl;
+          @apply text-gray-500 h-7 cursor-pointer transition-all duration-300 text-xl;
           @apply hover:text-black;
+          transition-delay: 50ms;
+
 
           &:hover{
             transform: rotateY(180deg);
