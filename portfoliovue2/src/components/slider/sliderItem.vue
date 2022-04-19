@@ -4,12 +4,14 @@
       <div class="wrapper">
         <img class="bgImg" :src="urlStartingFromAssets(slideImgSrc)" alt="" />
         <div class="about-project-wrapper">
-          <p class="main-text">Brand and Design</p>
-          <p class="sub-text">Website adaptable to all devices, with ui components and animated interactions.</p>
-          <button class="demo-button">
-            <p class="button-text">Demo</p>
-            <i class="uil uil-arrow-right icon"></i>
-          </button>
+          <p class="main-text">{{ mainText }}</p>
+          <p class="sub-text">{{ subText }}</p>
+          <a :href="projectURL" target="_blank">
+            <button class="demo-button">
+              <p class="button-text">Demo</p>
+              <i class="uil uil-arrow-right icon"></i>
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -19,7 +21,15 @@
 <script>
 export default {
   name: "SliderItemComponent",
-  props: ["slideImgSrc", "currentSlideID", "index", "effect"],
+  props: [
+    "slideImgSrc",
+    "currentSlideID",
+    "index",
+    "effect",
+    "mainText",
+    "subText",
+    "projectURL",
+  ],
   methods: {
     urlStartingFromAssets: function (url) {
       return require(`@/assets${url}`);
@@ -35,25 +45,25 @@ export default {
     @apply rounded-xl;
   }
 
-  & .about-project-wrapper{
+  & .about-project-wrapper {
     @apply font-poppins;
-    & .main-text{
+    & .main-text {
       @apply text-xl font-semibold my-4;
     }
 
-    & .sub-text{
+    & .sub-text {
       @apply mb-4 text-gray-500 font-medium;
     }
-    & .demo-button{
+    & .demo-button {
       @apply flex bg-purple-600 text-white rounded-lg px-3 items-center h-14 cursor-pointer;
 
-      &:hover .icon{
+      &:hover .icon {
         @apply ml-2.5;
       }
-      & .button-text{
+      & .button-text {
         @apply ml-1 font-medium;
       }
-      & .icon{
+      & .icon {
         @apply text-xl ml-1.5 mt-0.5 transition-all duration-300;
       }
     }

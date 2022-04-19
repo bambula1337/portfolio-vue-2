@@ -34,9 +34,27 @@ export default {
     return {
       Slider: {
         urls: [
-          "/images/portfolio/portfolio_1.jpg",
-          "/images/portfolio/portfolio_2.jpg",
-          "/images/portfolio/portfolio_3.jpg",
+          {
+            id:1,
+            imgUrl: "/images/portfolio/portfolio_1.jpg",
+            mainText: 'Brand and Design',
+            subText: 'dasadsasdasdasd',
+            projectUrl: 'https://iconscout.com/unicons/explore/line',
+          },
+          {
+            id:2,
+            imgUrl:  "/images/portfolio/portfolio_2.jpg",
+            mainText: 'Brand and Design',
+            subText: 'dasadsasdasdasd',
+            projectUrl: 'https://iconscout.com/unicons/explore/line',
+          },
+          {
+            id:3,
+            imgUrl: "/images/portfolio/portfolio_3.jpg",
+            mainText: 'Brand and Design',
+            subText: 'dasadsasdasdasd',
+            projectUrl: 'https://iconscout.com/unicons/explore/line',
+          }
         ],
         IntervalAbility: false,
       },

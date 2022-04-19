@@ -18,7 +18,10 @@
           <SliderItem
             v-for="(slide, index) in slides"
             :key="index"
-            :slideImgSrc="slide"
+            :slideImgSrc="slide.imgUrl"
+            :mainText="slide.mainText"
+            :subText="slide.subText"
+            :projectURL="slide.projectUrl"
             :currentSlideID="currentSlideID"
             :index="index"
             :effect="animation.name"
