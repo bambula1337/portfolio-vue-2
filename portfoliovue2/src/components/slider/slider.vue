@@ -24,7 +24,7 @@
             :effect="animation.name"
           />
         </div>
-        
+
         <div class="sliderDots">
           <p
             v-for="(dot, index) in slides"
@@ -139,10 +139,13 @@ export default {
 
 <style lang="scss" scoped>
 .slider {
-  @apply flex justify-between flex-col;
+  @apply flex justify-between flex-col h-52;
+
+  .slider_and_name {
+  }
 
   & .slider-wrapper {
-    @apply relative flex items-end justify-center w-88 h-104;
+    @apply relative flex items-end justify-center w-88 h-100;
     @apply smlger:w-100 h-108;
 
     & .item-wrapper {
@@ -151,7 +154,8 @@ export default {
 }
 
 .sliderDots {
-  @apply flex;
+  @apply flex -mb-100;
+  @apply smlger:-mb-104;
 
   & .all {
     @apply cursor-pointer rounded-full w-2.5 h-2.5 top-0 -left-0 mx-2 transition-all duration-1000 bg-gray-400;
@@ -167,21 +171,6 @@ export default {
 }
 
 .slider_and_name {
-  @apply flex flex-col items-center;
-
-  & .project-name {
-    @apply text-5xl mb-2;
-    font-family: "Train One";
-    color: #ae5fff;
-  }
-
-  & .github {
-    @apply flex self-center w-32;
-    @apply md:mt-5;
-    @media (min-width: 1024px) {
-      filter: invert(95%) sepia(0%) saturate(58%) hue-rotate(4deg)
-        brightness(120%) contrast(100%);
-    }
-  }
+  @apply flex flex-col items-center h-0;
 }
 </style>

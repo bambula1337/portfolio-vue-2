@@ -38,6 +38,5 @@ export default {
 <style lang="scss" scoped>
 .sliderMain {
   @apply mt-10;
-
 }
 </style>
