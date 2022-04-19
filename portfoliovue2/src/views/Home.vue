@@ -6,6 +6,7 @@
     <Services/>
     <Portfolio/>
     <Project/>
+    <Contact/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Skills from '@/components/Skills/SkillsMain.vue';
 import Services from '@/components/Services.vue';
 import Portfolio from '@/components/Portfolio.vue';
 import Project from '@/components/Project.vue';
+import Contact from '@/components/Contact.vue';
 
 
 export default {
@@ -27,6 +29,7 @@ export default {
     Services,
     Portfolio,
     Project,
+    Contact
   }
 };
 </script>
