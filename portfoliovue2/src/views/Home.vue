@@ -5,6 +5,7 @@
     <Skills/>
     <Services/>
     <Portfolio/>
+    <Project/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import About from '@/components/About/AboutMain.vue';
 import Skills from '@/components/Skills/SkillsMain.vue';
 import Services from '@/components/Services.vue';
 import Portfolio from '@/components/Portfolio.vue';
+import Project from '@/components/Project.vue';
 
 
 export default {
@@ -23,7 +25,8 @@ export default {
     About,
     Skills,
     Services,
-    Portfolio
+    Portfolio,
+    Project,
   }
 };
 </script>
