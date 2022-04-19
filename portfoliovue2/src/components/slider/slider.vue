@@ -24,7 +24,6 @@
             :effect="animation.name"
           />
         </div>
-
         <div class="sliderDots">
           <p
             v-for="(dot, index) in slides"
@@ -113,7 +112,11 @@ export default {
   created() {
     this.intervalSet();
   },
-  props: ["ProjectName", "Slides", "IntervalAbility", "IntervalTime"],
+  mounted(){
+    this.bus.$on('arrowPrev', this.prev);
+    this.bus.$on('arrowNext', this.next);
+  },
+  props: ["ProjectName", "Slides", "IntervalAbility", "IntervalTime", "bus"],
   data() {
     return {
       slides: [...this.Slides],

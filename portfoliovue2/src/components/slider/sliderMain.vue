@@ -1,11 +1,15 @@
 <template>
   <div class="sliderMain" id="projects">
-    <Slider :ProjectName="Slider.ProjectName" :Slides="Slider.urls" :IntervalTime="Slider.IntervalTime" :IntervalAbility="Slider.IntervalAbility" />
+    <i class="uil uil-angle-left-b icon" @click='arrowPrev'></i>
+    <Slider :ProjectName="Slider.ProjectName" :Slides="Slider.urls" :IntervalTime="Slider.IntervalTime" :IntervalAbility="Slider.IntervalAbility" :bus='eventBus' />
+    <i class="uil uil-angle-right-b icon" @click='arrowNext'></i>
   </div>
 </template>
 
 <script>
 import Slider from "@/components/slider/slider.vue";
+import Vue from "vue";
+
 
 export default {
   name: "SliderMain",
@@ -18,7 +22,13 @@ export default {
         top: 0,
         behavior: 'smooth',
       });
-    }
+    },
+    arrowPrev: function(){
+      this.eventBus.$emit('arrowPrev')
+    },
+    arrowNext: function(){
+      this.eventBus.$emit('arrowNext')
+    },
   },
   data() {
     return {
@@ -30,6 +40,7 @@ export default {
         ],
         IntervalAbility: false,
       },
+      eventBus: new Vue()
     };
   },
 };
@@ -37,6 +48,14 @@ export default {
 
 <style lang="scss" scoped>
 .sliderMain {
-  @apply mt-10;
+  @apply mt-10 flex items-center justify-center;
+
+  & .icon{
+    @apply text-5xl text-purple-600 -mx-12 z-60 transition-all duration-300;
+
+    &:hover{
+      @apply text-purple-500;
+    }
+  }
 }
 </style>
