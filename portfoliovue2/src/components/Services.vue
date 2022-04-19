@@ -191,7 +191,7 @@ export default {
   }
 
   & .services-modal {
-    @apply w-screen h-screen justify-center items-center fixed top-0 left-0;
+    @apply w-screen h-screen justify-center items-center fixed top-0 left-0 z-70;
     background-color: rgba(128, 128, 128, 0.337);
     animation-name: modal-main-reveal;
     animation-duration: 400ms;
