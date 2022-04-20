@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="main-text-wrapper">
-      <p class="main-text">Alexa</p>
+      <p class="main-text">Adm's</p>
       <p class="sub-text">Front-end developer</p>
     </div>
     <div class="links-wrapper">

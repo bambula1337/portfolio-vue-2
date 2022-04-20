@@ -10,8 +10,8 @@
       <div class="top">
         <img src="@/assets/images/about/girl.jpg" class="image" alt="" />
         <p class="text">
-          Web developer with extensive knowledge and years of experience,
-          working in web technologies and Ui / Ux design, delivering quality
+          Web developer with extensive knowledge and year of experience,
+          working with web technologies and design, delivering quality
           work.
         </p>
       </div>
@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     numberFixer: function (number) {
-      if (number < 10) {
+      if (number < 10 && number > 0) {
         return "0" + number + "+";
       } else {
         return number + "+";
@@ -61,17 +61,17 @@ export default {
       StatCards: [
         {
           id: 1,
-          number: 8,
+          number: 1,
           text: "Years experience",
         },
         {
           id: 2,
-          number: 20,
+          number: 3,
           text: "Completed projects",
         },
         {
           id: 3,
-          number: 5,
+          number: 0,
           text: "Companies worked",
         },
       ],

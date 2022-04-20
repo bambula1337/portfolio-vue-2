@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="mobile-controller">
-      <div class="logo">Alexa</div>
+      <div class="logo">Adm's</div>
       <div class="menu-opener">
         <i class="uil uil-moon icon"></i>
         <i class="uil uil-apps icon" @click="mobileMenuOpened = true"></i>

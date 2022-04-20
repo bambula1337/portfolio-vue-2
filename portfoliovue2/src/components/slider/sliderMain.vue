@@ -69,7 +69,7 @@ export default {
   @apply mt-10 flex items-center justify-center;
 
   & .icon{
-    @apply text-5xl text-purple-600 -mx-12 z-60 transition-all duration-300;
+    @apply text-5xl text-purple-600 -mx-12 z-60 transition-all duration-300 cursor-pointer;
 
     &:hover{
       @apply text-purple-500;

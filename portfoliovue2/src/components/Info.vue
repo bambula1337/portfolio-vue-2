@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="bottom">
-      <p class="main-text">Hi, I'm Alexa</p>
+      <p class="main-text">Hi, I'm Adm's</p>
       <p class="sub-text">Front-end developer</p>
       <p class="text">
         High level experience in web design and development knowledge, producing

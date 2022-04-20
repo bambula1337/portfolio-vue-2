@@ -66,7 +66,7 @@ export default {
           id: 2,
           icon: "uil-envelope-alt",
           mainText: "Email",
-          subText: "lemopidr1@gmail.com",
+          subText: "oleg133766@gmail.com",
         },
         {
           id: 3,
