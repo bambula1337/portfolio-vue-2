@@ -85,7 +85,7 @@ export default {
     }
   }
   & .mobile-menu {
-    @apply flex fixed bottom-0 left-0 w-full h-52 rounded-t-2xl bg-gray-50 justify-center pt-5 transition-all duration-500 z-70;
+    @apply flex fixed bottom-0 left-0 w-full h-52 rounded-t-3xl bg-gray-50 justify-center pt-5 transition-all duration-500 z-70;
     -webkit-box-shadow: 0px 10px 13px -7px #00000075,
       0px 7px 18px 10px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 10px 13px -7px #00000075,

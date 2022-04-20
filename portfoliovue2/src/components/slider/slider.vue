@@ -152,9 +152,10 @@ export default {
 
   & .slider-wrapper {
     @apply relative flex items-end justify-center w-88 h-100;
-    @apply smlger:w-100 h-108;
+    @apply smlger:w-144 h-108;
 
     & .item-wrapper {
+      
     }
   }
 }

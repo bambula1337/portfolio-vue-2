@@ -43,6 +43,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   @apply bg-purple-600 pb-20 pt-7 font-poppins text-white px-5;
+  @apply smlger:px-10;
   & .main-text-wrapper {
     & .main-text {
       @apply text-xl font-semibold;

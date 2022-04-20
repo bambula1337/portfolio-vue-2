@@ -65,7 +65,7 @@ export default {
           id: 1,
           summary: {
             icon: "uil-brackets-curly",
-            mainText: "Front-end developer",
+            mainText: "Developer",
             subText: "More than 1 years",
           },
           skills: [
@@ -158,6 +158,8 @@ export default {
   @apply mb-20 flex justify-center flex-col items-center;
   & .skills-main {
     @apply mt-10;
+    @apply smplus:flex smplus:justify-start;
+    flex-flow: row wrap;
     & .details {
       @apply transition-all duration-1000 overflow-hidden;
       &[open] .summary .icon-wrapper .icon {
@@ -168,17 +170,18 @@ export default {
       //   animation: opening-card-animation 1s ease-in-out;
       // }
 
-      &:not([open]){
+      &:not([open]) {
         max-height: 3em;
       }
 
-      &[open]{
+      &[open] {
         max-height: 25em;
       }
 
       @apply font-poppins mb-7;
       & .summary {
-        @apply flex justify-between w-84;
+        @apply flex justify-between w-80;
+        @apply smplus:w-66 smplus:ml-10;
         & .text-wrapper {
           @apply flex justify-center items-center;
           & .icon {
@@ -205,6 +208,7 @@ export default {
         @apply flex flex-col transition-all duration-500;
         & .main-card {
           @apply pl-9.5 pr-2 my-3;
+          @apply smplus:text-center;
           & .card-text {
             @apply mt-2;
             & .text {

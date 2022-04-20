@@ -112,6 +112,7 @@ export default {
 
   & .contact-main {
     @apply mt-10 px-5 font-poppins;
+    @apply smlger:px-10;
     & .main-info {
       & .info-card {
         @apply flex items-center mb-7;

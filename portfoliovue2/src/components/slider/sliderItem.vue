@@ -71,6 +71,7 @@ export default {
 
   & .wrapper {
     @apply mx-10;
+    @apply smlger:mx-28;
   }
 }
 

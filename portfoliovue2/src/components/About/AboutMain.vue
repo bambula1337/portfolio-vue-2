@@ -93,6 +93,7 @@ export default {
       @apply flex justify-center flex-col items-center;
       & .image {
         @apply w-60 rounded-xl mt-10 mb-7;
+        @apply smlger:w-72;
       }
 
       & .text {
@@ -104,8 +105,10 @@ export default {
       @apply flex items-center flex-col;
       & .stats {
         @apply flex mt-10 justify-between;
+        @apply smlger:w-8/10;
         & .stat-card {
           @apply flex flex-col items-center text-center w-3/10;
+          @apply smlger:w-2/10;
           & .card-number {
             @apply font-poppins font-semibold text-2xl;
           }

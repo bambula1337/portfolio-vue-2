@@ -162,7 +162,8 @@ export default {
     @apply flex justify-around items-center mt-10;
     flex-flow: row wrap;
     & .card {
-      @apply w-38 h-52 rounded-md flex flex-col justify-evenly pl-3 mb-7;
+      @apply w-36 h-52 rounded-md flex flex-col justify-evenly pl-3 mb-7;
+      @apply smlger:w-42 h-56;
       -webkit-box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.15);
 
