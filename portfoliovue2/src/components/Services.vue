@@ -68,7 +68,6 @@ export default {
         this.Modal.isOpened = false;
         document.body.style.overflowY = "scroll";
         document.body.style.overflowX = "hidden";
-        console.dir(document.body.style);
       }
     },
   },
