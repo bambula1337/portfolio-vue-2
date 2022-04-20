@@ -23,7 +23,8 @@
         <div class="form-textarea">
           <p class="textarea-text">{{ Form.textArea.text }}</p>
           <textarea
-            v-model="Form.textArea.Vmodel"
+            :value="Form.textArea.Vmodel"
+            @input="event => Form.textArea.Vmodel = event.target.value"
             class="textarea"
             maxlength="200"
           ></textarea>
