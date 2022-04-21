@@ -58,6 +58,7 @@ export default {
 .info{
   @apply mt-20 pl-1/20;
   @apply md:flex md:flex-row-reverse md:justify-around;
+  @apply lg:mt-30;
   & .top{
     @apply flex items-center justify-start;
     & .icons{

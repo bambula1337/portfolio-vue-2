@@ -9,13 +9,12 @@
     <div class="about-main">
       <div class="top">
         <img src="@/assets/images/about/girl.jpg" class="image" alt="" />
-        <p class="text">
-          Web developer with extensive knowledge and year of experience,
-          working with web technologies and design, delivering quality
-          work.
-        </p>
       </div>
       <div class="bottom">
+        <p class="text">
+          Web developer with extensive knowledge and year of experience, working
+          with web technologies and design, delivering quality work.
+        </p>
         <div class="stats">
           <div
             class="stat-card"
@@ -89,23 +88,25 @@ export default {
 
   & .about-main {
     @apply flex flex-col;
+    @apply md:flex-row md:justify-around md:items-center md:mt-10;
     & .top {
       @apply flex justify-center flex-col items-center;
       & .image {
         @apply w-60 rounded-xl mt-10 mb-7;
         @apply smlger:w-72;
       }
-
-      & .text {
-        @apply text-center font-poppins text-gray-500;
-      }
     }
 
     & .bottom {
       @apply flex items-center flex-col;
+      @apply md:w-80 md:justify-center;
+      & .text {
+        @apply text-center font-poppins text-gray-500;
+      }
       & .stats {
         @apply flex mt-10 justify-between;
         @apply smlger:w-8/10;
+        @apply md:justify-around md:w-100;
         & .stat-card {
           @apply flex flex-col items-center text-center w-3/10;
           @apply smlger:w-2/10;
@@ -118,7 +119,7 @@ export default {
         }
       }
       & .download {
-        &:hover .icon{
+        &:hover .icon {
           @apply mt-0;
         }
         @apply bg-purple-600 flex h-14 px-3 items-center rounded-lg mt-7;
