@@ -52,11 +52,14 @@ export default {
     & .main-text {
       @apply text-xl font-semibold my-4;
       @apply md:w-52;
+      @apply lg:text-2xl;
+      @apply lgplus:w-68;
     }
 
     & .sub-text {
       @apply mb-4 text-gray-500 font-medium;
       @apply md:w-60;
+      @apply lgplus:text-xl lgplus:w-72;
     }
     & .demo-button {
       @apply flex bg-purple-600 text-white rounded-lg px-3 items-center h-14 cursor-pointer;
@@ -66,9 +69,11 @@ export default {
       }
       & .button-text {
         @apply ml-1 font-medium;
+        @apply lgplus:text-lg;
       }
       & .icon {
         @apply text-xl ml-1.5 mt-0.5 transition-all duration-300;
+        @apply lgplus:text-2xl;
       }
     }
   }
@@ -77,6 +82,7 @@ export default {
     @apply mx-10;
     @apply smlger:mx-28;
     @apply md:flex md:mx-72;
+    @apply lgplus:mx-84;
   }
 }
 

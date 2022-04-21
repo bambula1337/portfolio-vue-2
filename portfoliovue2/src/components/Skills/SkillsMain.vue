@@ -161,7 +161,8 @@ export default {
     @apply smplus:flex smplus:justify-center;
     flex-flow: row wrap;
     & .details {
-      @apply transition-all duration-1000 overflow-hidden;
+      @apply transition-all overflow-hidden;
+      transition-duration: 1200ms;
       @apply md:mx-5;
       &[open] .summary .icon-wrapper .icon {
         transform: rotateX(180deg);
@@ -176,7 +177,7 @@ export default {
       }
 
       &[open] {
-        max-height: 25em;
+        max-height: 27em;
       }
 
       @apply font-poppins mb-7;
@@ -185,19 +186,23 @@ export default {
         @apply flex justify-between w-80;
         @apply smplus:w-66 smplus:mx-5;
         @apply md:w-72;
+        @apply smplus:w-76;
 
         & .text-wrapper {
           @apply flex justify-center items-center;
           & .icon {
             @apply text-purple-600 text-3xl;
+            @apply lg:text-4xl;
           }
           & .text {
             @apply flex flex-col ml-2;
             & .main-text {
               @apply text-lg font-semibold;
+              @apply lg:text-xl;
             }
             & .sub-text {
               @apply font-medium text-gray-500 text-xs;
+              @apply lg:text-sm;
             }
           }
         }
@@ -205,6 +210,7 @@ export default {
           @apply flex justify-center items-center;
           & .icon {
             @apply text-purple-600 text-3xl transition-all duration-500;
+            @apply lg:text-4xl;
           }
         }
       }
@@ -217,6 +223,7 @@ export default {
             @apply mt-2;
             & .text {
               @apply font-poppins font-medium;
+              @apply lg:text-lg lg:font-semibold lg:text-gray-700;
             }
             & .line {
               @apply bg-purple-600 h-1 rounded-full;

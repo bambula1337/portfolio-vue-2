@@ -94,14 +94,19 @@ export default {
       & .image {
         @apply w-60 rounded-xl mt-10 mb-7;
         @apply smlger:w-72;
+        @apply lg:w-88;
+        @apply lgplus:w-96;
       }
     }
 
     & .bottom {
       @apply flex items-center flex-col;
       @apply md:w-80 md:justify-center;
+      @apply lgplus:w-88;
       & .text {
         @apply text-center font-poppins text-gray-500;
+        @apply lg:text-lg;
+        @apply lgplus:text-xl;
       }
       & .stats {
         @apply flex mt-10 justify-between;
@@ -112,9 +117,11 @@ export default {
           @apply smlger:w-2/10;
           & .card-number {
             @apply font-poppins font-semibold text-2xl;
+            @apply lg:text-3xl;
           }
           & .card-text {
             @apply font-poppins text-gray-500 text-sm;
+            @apply lg:text-base;
           }
         }
       }

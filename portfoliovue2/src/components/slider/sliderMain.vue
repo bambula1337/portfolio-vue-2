@@ -72,6 +72,8 @@ export default {
     @apply text-5xl text-purple-600 -mx-12 z-60 transition-all duration-300 cursor-pointer;
     @apply smlger:-mx-26 smlger:-mb-10;
     @apply md:-mx-30 md:-mt-10;
+    @apply lg:-mx-20 lg:mt-0 lg:text-6xl;
+    @apply lgplus:mt-10;
 
     &:hover{
       @apply text-purple-500;

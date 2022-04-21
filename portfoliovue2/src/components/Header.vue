@@ -107,6 +107,7 @@ export default {
     & .logo-wrapper {
       & .logo {
         @apply cursor-pointer transition-all duration-300;
+        @apply lgplus:text-lg;
           &:hover{
             @apply text-purple-600;
           }
@@ -117,6 +118,7 @@ export default {
       & .links-wrapper {
         & .link {
           @apply mr-7 text-sm transition-all duration-300;
+          @apply lgplus:text-base lgplus:mr-10;
           &:hover{
             @apply text-purple-600;
           }

@@ -161,24 +161,29 @@ export default {
   & .services-main {
     @apply flex justify-around items-center mt-10;
     @apply smplus:justify-evenly;
+    @apply lgplus:justify-center;
     flex-flow: row wrap;
     & .card {
       @apply w-36 h-52 rounded-md flex flex-col justify-evenly pl-3 mb-7;
       @apply smlger:w-42 h-56;
       @apply md:w-60 md:pr-5 md:h-68;
+      @apply lgplus:mx-20;
       -webkit-box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.15);
 
       & .icon {
         @apply text-purple-600 text-2xl;
+        @apply lg:text-3xl;
       }
       & .text {
         @apply text-xl;
+        @apply lg:text-2xl;
       }
       & .link {
         @apply flex items-center text-purple-600 cursor-pointer;
         & .link-text {
           @apply text-base;
+          @apply lg:text-lg;
         }
         & .link-icon {
           @apply text-xl -mb-0.5 ml-2 transition-all duration-300;
@@ -200,15 +205,18 @@ export default {
 
     & .modal-card {
       @apply w-72 bg-white rounded-lg p-5 flex flex-col justify-between;
+      @apply md:w-88;
       animation-name: modal-card-reveal;
       animation-duration: 400ms;
       & .top {
         @apply flex justify-between relative mb-5;
         & .text {
+          @apply md:text-2xl md:font-medium;
         }
         & .icon {
           @apply text-gray-500 h-7 cursor-pointer transition-all duration-300 text-xl;
           @apply hover:text-black;
+          @apply md:text-2xl;
           transition-delay: 50ms;
 
 
@@ -219,13 +227,16 @@ export default {
       }
       & .bottom {
         @apply flex flex-col;
+
         & .ability-card {
           @apply flex items-center mb-2;
           & .icon {
             @apply text-purple-600 text-2xl;
+            @apply md:text-3xl;
           }
           & .text {
             @apply text-gray-500 ml-1;
+            @apply md:text-lg;
           }
         }
       }

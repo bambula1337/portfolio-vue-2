@@ -58,13 +58,15 @@ export default {
 .info{
   @apply mt-20 pl-1/20;
   @apply md:flex md:flex-row-reverse md:justify-around;
-  @apply lg:mt-30;
+  @apply lg:mt-30 lg:justify-evenly;
   & .top{
     @apply flex items-center justify-start;
     & .icons{
       @apply flex flex-col -mb-5 mr-13/100;
       @apply smplus:-mb-14;
       @apply md:absolute md:left-10;
+      @apply lg:left-1/20;
+      @apply lgplus:left-2/25;
       & .icon{
         @apply mb-4 text-xl text-purple-600 cursor-pointer transition-all duration-300;
         @apply smplus:text-2xl smplus:mb-7;
@@ -77,6 +79,7 @@ export default {
       & .bubble-svg{
         @apply w-52;
         @apply smplus:w-72;
+        @apply lgplus:w-76;
         fill: rgb(124, 58, 237);
       }
       & .bubble-image{
@@ -88,14 +91,18 @@ export default {
   & .bottom{
     @apply font-poppins mt-7;
     @apply md:w-64 md:ml-7;
+    @apply lg:w-80 lg:-ml-16 -mr-24;
     & .main-text{
       @apply text-3xl font-semibold;
+      @apply lg:text-4xl;
     }
     & .sub-text{
       @apply mt-1 mb-3 text-gray-500 font-medium;
+      @apply lg:text-lg;
     }
     & .text{
       @apply text-gray-500;
+      @apply lg:text-lg;
     }
     & .contact-button{
       &:hover .icon{

@@ -31,10 +31,13 @@ export default {
     @apply flex flex-col justify-center items-center text-center px-7;
     & .main-text {
       @apply text-xl font-semibold;
+      @apply lg:text-2xl;
     }
     & .sub-text {
       @apply text-sm font-medium m-3;
       @apply md:w-54;
+      @apply lg:text-base;
+      @apply lgplus:text-lg;
     }
     & .contact-button {
       &:hover .icon {
@@ -43,9 +46,11 @@ export default {
       @apply flex bg-white text-purple-600 h-14 px-3 items-center rounded-lg mt-2 mb-7;
       & .button-text {
         @apply font-medium;
+        @apply lg:text-lg;
       }
       & .icon {
         @apply ml-2 text-xl transition-all duration-300;
+        @apply lg:text-2xl;
       }
     }
   }
@@ -54,6 +59,7 @@ export default {
     & .image {
       @apply w-52;
       @apply md:w-64;
+      @apply lg:w-72;
     }
   }
 }

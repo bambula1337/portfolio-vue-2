@@ -24,7 +24,7 @@
           <p class="textarea-text">{{ Form.textArea.text }}</p>
           <textarea
             :value="Form.textArea.Vmodel"
-            @input="event => Form.textArea.Vmodel = event.target.value"
+            @input="(event) => (Form.textArea.Vmodel = event.target.value)"
             class="textarea"
             maxlength="200"
           ></textarea>
@@ -114,20 +114,24 @@ export default {
     @apply mt-10 px-5 font-poppins;
     @apply smlger:px-10;
     @apply smplus:flex smplus:justify-around;
+    @apply lg:justify-evenly;
     & .main-info {
       @apply smplus:mx-10;
       & .info-card {
         @apply flex items-center mb-7;
         & .icon {
           @apply text-3xl text-purple-600;
+          @apply lg:text-4xl;
         }
         & .card-text {
           @apply ml-2.5;
           & .main-text {
             @apply font-semibold;
+            @apply lg:text-lg;
           }
           & .sub-text {
             @apply text-sm font-medium text-gray-500;
+            @apply lg:text-base;
           }
         }
       }
@@ -140,11 +144,14 @@ export default {
         background-color: rgb(236, 232, 255);
         & .card-text {
           @apply text-sm text-gray-500;
+          @apply lg:text-base;
         }
         & .card-input {
           @apply outline-none my-1 transition-all duration-300 w-9/10;
           @apply smplus:w-64;
           @apply md:w-80;
+          @apply lg:w-100;
+          @apply lgplus:w-112;
           background-color: rgb(236, 232, 255);
         }
       }
@@ -154,6 +161,7 @@ export default {
       background-color: rgb(236, 232, 255);
       & .textarea-text {
         @apply text-sm text-gray-500;
+        @apply lg:text-base;
       }
       & .textarea {
         @apply outline-none my-1 transition-all h-40 duration-300 w-19/20 resize-none pr-3;
@@ -164,12 +172,15 @@ export default {
       @apply flex justify-end;
       & .max-amount {
         @apply text-sm text-gray-500;
+        @apply lg:text-base;
       }
     }
     & .form-button {
       @apply bg-purple-600 flex w-40 h-14 px-3 items-center rounded-lg mt-2 transition-all duration-300;
+      @apply lg:w-44;
       &:hover {
         @apply w-41;
+        @apply lg:w-45;
 
         & .icon {
           @apply ml-3;
@@ -177,6 +188,7 @@ export default {
       }
       & .button-text {
         @apply text-white text-sm font-medium;
+        @apply lg:text-base;
       }
       & .icon {
         @apply text-white ml-2 text-xl transition-all duration-300;

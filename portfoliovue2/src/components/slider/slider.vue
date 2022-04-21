@@ -154,6 +154,8 @@ export default {
     @apply relative flex items-end justify-center w-88 h-100;
     @apply smlger:w-144 h-108;
     @apply md:w-220;
+    @apply lg:w-240;
+    @apply lgplus:w-280;
 
 
     & .item-wrapper {
@@ -166,6 +168,8 @@ export default {
   @apply flex -mb-100;
   @apply smlger:-mb-112;
   @apply md:-mb-64;
+  @apply lg:-mb-72;
+  @apply lgplus:-mb-84;
 
   & .all {
     @apply cursor-pointer rounded-full w-2.5 h-2.5 top-0 -left-0 mx-2 transition-all duration-1000 bg-gray-400;
