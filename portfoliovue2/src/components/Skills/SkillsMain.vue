@@ -158,10 +158,11 @@ export default {
   @apply mb-20 flex justify-center flex-col items-center;
   & .skills-main {
     @apply mt-10;
-    @apply smplus:flex smplus:justify-start;
+    @apply smplus:flex smplus:justify-center;
     flex-flow: row wrap;
     & .details {
       @apply transition-all duration-1000 overflow-hidden;
+      @apply md:mx-5;
       &[open] .summary .icon-wrapper .icon {
         transform: rotateX(180deg);
       }
@@ -179,9 +180,12 @@ export default {
       }
 
       @apply font-poppins mb-7;
+      @apply smplus:mb-10;
       & .summary {
         @apply flex justify-between w-80;
-        @apply smplus:w-66 smplus:ml-10;
+        @apply smplus:w-66 smplus:mx-5;
+        @apply md:w-72;
+
         & .text-wrapper {
           @apply flex justify-center items-center;
           & .icon {
@@ -208,7 +212,7 @@ export default {
         @apply flex flex-col transition-all duration-500;
         & .main-card {
           @apply pl-9.5 pr-2 my-3;
-          @apply smplus:text-center;
+          @apply smplus:text-center smplus:px-5;
           & .card-text {
             @apply mt-2;
             & .text {

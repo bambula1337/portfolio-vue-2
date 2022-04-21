@@ -43,16 +43,20 @@ export default {
   @apply absolute top-0 left-0 right-0 bottom-0;
   & .bgImg {
     @apply rounded-xl;
+    @apply md:-ml-36;
   }
 
   & .about-project-wrapper {
     @apply font-poppins;
+    @apply md:ml-5 md:flex md:flex-col md:justify-between md:-mt-2;
     & .main-text {
       @apply text-xl font-semibold my-4;
+      @apply md:w-52;
     }
 
     & .sub-text {
       @apply mb-4 text-gray-500 font-medium;
+      @apply md:w-60;
     }
     & .demo-button {
       @apply flex bg-purple-600 text-white rounded-lg px-3 items-center h-14 cursor-pointer;
@@ -72,6 +76,7 @@ export default {
   & .wrapper {
     @apply mx-10;
     @apply smlger:mx-28;
+    @apply md:flex md:mx-72;
   }
 }
 

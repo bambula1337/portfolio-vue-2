@@ -38,21 +38,21 @@ export default {
             id:1,
             imgUrl: "/images/portfolio/portfolio_1.jpg",
             mainText: 'Brand and Design',
-            subText: 'dasadsasdasdasd',
+            subText: 'Website adaptable to all devices, with ui components and animated interaction',
             projectUrl: 'https://iconscout.com/unicons/explore/line',
           },
           {
             id:2,
             imgUrl:  "/images/portfolio/portfolio_2.jpg",
             mainText: 'Brand and Design',
-            subText: 'dasadsasdasdasd',
+            subText: 'Website adaptable to all devices, with ui components and animated interaction',
             projectUrl: 'https://iconscout.com/unicons/explore/line',
           },
           {
             id:3,
             imgUrl: "/images/portfolio/portfolio_3.jpg",
             mainText: 'Brand and Design',
-            subText: 'dasadsasdasdasd',
+            subText: 'Website adaptable to all devices, with ui components and animated interaction',
             projectUrl: 'https://iconscout.com/unicons/explore/line',
           }
         ],
@@ -71,6 +71,7 @@ export default {
   & .icon{
     @apply text-5xl text-purple-600 -mx-12 z-60 transition-all duration-300 cursor-pointer;
     @apply smlger:-mx-26 smlger:-mb-10;
+    @apply md:-mx-30 md:-mt-10;
 
     &:hover{
       @apply text-purple-500;

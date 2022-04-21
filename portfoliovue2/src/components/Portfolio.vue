@@ -36,5 +36,6 @@ export default {
 <style lang="scss" scoped>
 .portfolio{
   @apply mb-20;
+  @apply md:mb-0;
 }
 </style>

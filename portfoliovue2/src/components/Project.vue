@@ -25,6 +25,7 @@ export default {
 <style lang="scss" scoped>
 .project {
   @apply mb-20 bg-purple-600 font-poppins text-white flex flex-col pt-10;
+  @apply md:flex-row md:justify-evenly;
 
   & .project-info {
     @apply flex flex-col justify-center items-center text-center px-7;
@@ -33,6 +34,7 @@ export default {
     }
     & .sub-text {
       @apply text-sm font-medium m-3;
+      @apply md:w-54;
     }
     & .contact-button {
       &:hover .icon {
@@ -51,6 +53,7 @@ export default {
     @apply flex justify-center items-center;
     & .image {
       @apply w-52;
+      @apply md:w-64;
     }
   }
 }

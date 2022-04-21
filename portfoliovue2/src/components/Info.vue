@@ -57,12 +57,16 @@ export default {
 <style lang="scss" scoped>
 .info{
   @apply mt-20 pl-1/20;
+  @apply md:flex md:flex-row-reverse md:justify-around;
   & .top{
     @apply flex items-center justify-start;
     & .icons{
       @apply flex flex-col -mb-5 mr-13/100;
+      @apply smplus:-mb-14;
+      @apply md:absolute md:left-10;
       & .icon{
         @apply mb-4 text-xl text-purple-600 cursor-pointer transition-all duration-300;
+        @apply smplus:text-2xl smplus:mb-7;
         &:hover{
           @apply text-purple-400;
         }
@@ -71,6 +75,7 @@ export default {
     & .image{
       & .bubble-svg{
         @apply w-52;
+        @apply smplus:w-72;
         fill: rgb(124, 58, 237);
       }
       & .bubble-image{
@@ -81,6 +86,7 @@ export default {
 
   & .bottom{
     @apply font-poppins mt-7;
+    @apply md:w-64 md:ml-7;
     & .main-text{
       @apply text-3xl font-semibold;
     }

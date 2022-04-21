@@ -113,7 +113,9 @@ export default {
   & .contact-main {
     @apply mt-10 px-5 font-poppins;
     @apply smlger:px-10;
+    @apply md:flex md:justify-around;
     & .main-info {
+      @apply md:mx-10;
       & .info-card {
         @apply flex items-center mb-7;
         & .icon {
@@ -132,6 +134,7 @@ export default {
     }
     & .main-form {
       @apply flex flex-col font-poppins mt-14;
+      @apply md:mt-0;
       & .form-card {
         @apply mb-7 pl-3 py-3 rounded-md;
         background-color: rgb(236, 232, 255);
@@ -140,6 +143,7 @@ export default {
         }
         & .card-input {
           @apply outline-none my-1 transition-all duration-300 w-9/10;
+          @apply md:w-80;
           background-color: rgb(236, 232, 255);
         }
       }

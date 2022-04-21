@@ -160,10 +160,12 @@ export default {
 
   & .services-main {
     @apply flex justify-around items-center mt-10;
+    @apply smplus:justify-evenly;
     flex-flow: row wrap;
     & .card {
       @apply w-36 h-52 rounded-md flex flex-col justify-evenly pl-3 mb-7;
       @apply smlger:w-42 h-56;
+      @apply md:w-60 md:pr-5 md:h-68;
       -webkit-box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.15);
 
