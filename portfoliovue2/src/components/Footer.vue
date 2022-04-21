@@ -54,6 +54,7 @@ export default {
   }
   & .links-wrapper {
     @apply flex flex-col my-14;
+    @apply smplus:relative smplus:left-1/2 smplus:my-0 smplus:-mt-13;
     & .link {
       @apply flex flex-col self-start items-start mb-7 font-medium;
 
