@@ -18,10 +18,12 @@ export default {
   & .main-text{
     @apply text-3xl font-poppins font-semibold;
     @apply lg:text-4xl;
+    @apply xl:text-4.5xl;
   }
   & .sub-text{
     @apply text-gray-500 font-poppins font-medium;
     @apply lg:text-lg;
+    @apply xl:text-xl;
   }
 }
 </style>

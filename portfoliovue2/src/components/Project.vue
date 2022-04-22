@@ -32,12 +32,14 @@ export default {
     & .main-text {
       @apply text-xl font-semibold;
       @apply lg:text-2xl;
+      @apply xl:text-3xl;
     }
     & .sub-text {
       @apply text-sm font-medium m-3;
       @apply md:w-54;
       @apply lg:text-base;
       @apply lgplus:text-lg;
+      @apply xl:text-xl xl:w-68 xl:m-5;
     }
     & .contact-button {
       &:hover .icon {
@@ -60,6 +62,7 @@ export default {
       @apply w-52;
       @apply md:w-64;
       @apply lg:w-72;
+      @apply xl:w-80;
     }
   }
 }

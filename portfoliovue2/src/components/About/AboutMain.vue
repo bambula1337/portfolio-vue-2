@@ -25,10 +25,12 @@
             <div class="card-text">{{ card.text }}</div>
           </div>
         </div>
-        <button class="download">
+        <a download="" href="@/assets/CV/test.txt">
+          <button class="download">
           <p class="text">Download CV</p>
           <i class="uil uil-download-alt icon"></i>
         </button>
+        </a>
       </div>
     </div>
   </div>
@@ -89,13 +91,16 @@ export default {
   & .about-main {
     @apply flex flex-col;
     @apply md:flex-row md:justify-around md:items-center md:mt-10;
+    @apply xl:justify-center;
     & .top {
       @apply flex justify-center flex-col items-center;
+      @apply xl:mx-10;
       & .image {
         @apply w-60 rounded-xl mt-10 mb-7;
         @apply smlger:w-72;
         @apply lg:w-88;
         @apply lgplus:w-96;
+        @apply xl:w-100;
       }
     }
 
@@ -103,6 +108,7 @@ export default {
       @apply flex items-center flex-col;
       @apply md:w-80 md:justify-center;
       @apply lgplus:w-88;
+      @apply xl:w-100 xl:mx-14;
       & .text {
         @apply text-center font-poppins text-gray-500;
         @apply lg:text-lg;
@@ -112,6 +118,7 @@ export default {
         @apply flex mt-10 justify-between;
         @apply smlger:w-8/10;
         @apply md:justify-around md:w-100;
+        @apply xl:w-128;
         & .stat-card {
           @apply flex flex-col items-center text-center w-3/10;
           @apply smlger:w-2/10;
@@ -132,6 +139,7 @@ export default {
         @apply bg-purple-600 flex h-14 px-3 items-center rounded-lg mt-7;
         & .text {
           @apply text-white font-medium;
+          @apply xl:text-lg;
         }
         & .icon {
           @apply text-white ml-2 -mt-1 text-xl transition-all duration-300;

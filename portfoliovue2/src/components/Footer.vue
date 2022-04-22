@@ -25,9 +25,15 @@
         >
       </div>
       <div class="icons-wrapper">
-        <i class="uil uil-github-alt icon"></i>
-        <i class="uil uil-twitter-alt icon"></i>
-        <i class="uil uil-instagram icon"></i>
+        <a href="https://github.com/bambula1337" class="">
+          <i class="uil uil-github-alt icon"></i>
+        </a>
+        <a href="https://twitter.com/admsDev">
+          <i class="uil uil-twitter-alt icon"></i>
+        </a>
+        <a href="https://www.instagram.com/adms_dev/">
+          <i class="uil uil-instagram icon"></i>
+        </a>
       </div>
     </div>
     <div class="copyright-text-wrapper">
@@ -49,6 +55,7 @@ export default {
   @apply smlger:px-10;
   & .main-footer {
     @apply lg:flex lg:justify-between lg:px-10;
+    @apply xl:justify-around;
     & .main-text-wrapper {
       & .main-text {
         @apply text-xl font-semibold;

@@ -74,6 +74,7 @@ export default {
     @apply md:-mx-30 md:-mt-10;
     @apply lg:-mx-20 lg:mt-0 lg:text-6xl;
     @apply lgplus:mt-10;
+    @apply xl:-mx-36;
 
     &:hover{
       @apply text-purple-500;

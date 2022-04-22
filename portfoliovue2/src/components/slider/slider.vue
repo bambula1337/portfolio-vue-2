@@ -156,6 +156,7 @@ export default {
     @apply md:w-220;
     @apply lg:w-240;
     @apply lgplus:w-280;
+    @apply xl:w-340;
 
 
     & .item-wrapper {

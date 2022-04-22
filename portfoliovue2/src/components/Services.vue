@@ -117,7 +117,7 @@ export default {
             abilities: [
               {
                 id: 1,
-                text: "Create template",
+                text: "Create templates",
               },
               {
                 id: 2,
@@ -162,6 +162,7 @@ export default {
     @apply flex justify-around items-center mt-10;
     @apply smplus:justify-evenly;
     @apply lgplus:justify-center;
+    @apply xl:mt-20;
     flex-flow: row wrap;
     & .card {
       @apply w-36 h-52 rounded-md flex flex-col justify-evenly pl-3 mb-7;
@@ -206,6 +207,7 @@ export default {
     & .modal-card {
       @apply w-72 bg-white rounded-lg p-5 flex flex-col justify-between;
       @apply md:w-88;
+      @apply xl:w-98;
       animation-name: modal-card-reveal;
       animation-duration: 400ms;
       & .top {
@@ -237,6 +239,7 @@ export default {
           & .text {
             @apply text-gray-500 ml-1;
             @apply md:text-lg;
+            @apply xl:ml-3;
           }
         }
       }

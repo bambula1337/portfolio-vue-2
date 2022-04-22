@@ -83,6 +83,7 @@ export default {
     @apply smlger:mx-28;
     @apply md:flex md:mx-72;
     @apply lgplus:mx-84;
+    @apply xl:mx-112;
   }
 }
 

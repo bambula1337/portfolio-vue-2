@@ -115,6 +115,7 @@ export default {
     @apply smlger:px-10;
     @apply smplus:flex smplus:justify-around;
     @apply lg:justify-evenly;
+    @apply xl:mt-20 xl:mb-36;
     & .main-info {
       @apply smplus:mx-10;
       & .info-card {

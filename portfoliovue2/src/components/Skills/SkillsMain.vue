@@ -159,6 +159,7 @@ export default {
   & .skills-main {
     @apply mt-10;
     @apply smplus:flex smplus:justify-center;
+    @apply xl:mt-20 xl:mb-20;
     flex-flow: row wrap;
     & .details {
       @apply transition-all overflow-hidden;
@@ -187,18 +188,21 @@ export default {
         @apply smplus:w-66 smplus:mx-5;
         @apply md:w-72;
         @apply smplus:w-76;
+        @apply xl:w-84;
 
         & .text-wrapper {
           @apply flex justify-center items-center;
           & .icon {
             @apply text-purple-600 text-3xl;
             @apply lg:text-4xl;
+            @apply xl:text-4.5xl;
           }
           & .text {
             @apply flex flex-col ml-2;
             & .main-text {
               @apply text-lg font-semibold;
               @apply lg:text-xl;
+              @apply xl:text-2xl;
             }
             & .sub-text {
               @apply font-medium text-gray-500 text-xs;
@@ -211,6 +215,7 @@ export default {
           & .icon {
             @apply text-purple-600 text-3xl transition-all duration-500;
             @apply lg:text-4xl;
+            @apply xl:text-4.5xl;
           }
         }
       }
