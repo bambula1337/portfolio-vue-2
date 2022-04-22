@@ -1,7 +1,20 @@
 <template>
   <div class="contact" id="contact">
-    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true" />
-    <div class="contact-main" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+    <WelcomeText
+      v-bind="WelcomeTextProps"
+      :isDarkMode="isDarkMode"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+      data-aos-once="true"
+    />
+    <div
+      class="contact-main"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+      data-aos-once="true"
+    >
       <div class="main-info">
         <div class="info-card" v-for="(card, index) in InfoCards" :key="index">
           <i class="uil icon" :class="card.icon"></i>
@@ -41,7 +54,7 @@
         <div class="max-amount-wrapper">
           <p class="max-amount">{{ Form.textArea.Vmodel.length }}/200</p>
         </div>
-        <button class="form-button">
+        <button class="form-button" @click="submit" title="Error: this function is temporary disabled, you should write in one of social medias which you can find on site">
           <p class="button-text">Send Message</p>
           <i class="uil uil-navigator icon"></i>
         </button>
@@ -57,6 +70,15 @@ export default {
   name: "Contact",
   components: {
     WelcomeText,
+  },
+  methods: {
+    submit: function () {
+      this.Form.inputs.forEach((el) => {
+        el.Vmodel = "";
+      });
+      this.Form.textArea.Vmodel = "";
+      alert('Error: this function is temporary disabled, you should write in one of social medias which you can find on site');
+    },
   },
   props: ["isDarkMode"],
   data() {
@@ -212,4 +234,5 @@ export default {
   background-color: rgb(5, 0, 60) !important;
   color: white !important;
 }
+
 </style>
