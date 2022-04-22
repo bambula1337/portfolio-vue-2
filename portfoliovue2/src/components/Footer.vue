@@ -1,37 +1,40 @@
 <template>
   <div class="footer" :class="{'bg-dark': isDarkMode}">
-    <div class="main-footer">
+    <div class="main-footer" data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        data-aos-once="true">
       <div class="main-text-wrapper">
         <p class="main-text">Adm's</p>
         <p class="sub-text">Front-end developer</p>
       </div>
       <div class="links-wrapper">
         <a
-          href="https://iconscout.com/unicons/explore/line"
-          target="_blank"
+          href="#services"
           class="link"
+          v-smooth-scroll
           >Services</a
         >
         <a
-          href="https://iconscout.com/unicons/explore/line"
-          target="_blank"
+          href="#portfolio"
           class="link"
+          v-smooth-scroll
           >Portfolio</a
         ><a
-          href="https://iconscout.com/unicons/explore/line"
-          target="_blank"
+          href="#contact"
           class="link"
+          v-smooth-scroll
           >Contact me</a
         >
       </div>
       <div class="icons-wrapper">
-        <a href="https://github.com/bambula1337" class="">
+        <a href="https://github.com/bambula1337" target="_blank" class="">
           <i class="uil uil-github-alt icon"></i>
         </a>
-        <a href="https://twitter.com/admsDev">
+        <a href="https://twitter.com/admsDev" target="_blank">
           <i class="uil uil-twitter-alt icon"></i>
         </a>
-        <a href="https://www.instagram.com/adms_dev/">
+        <a href="https://www.instagram.com/adms_dev/" target="_blank">
           <i class="uil uil-instagram icon"></i>
         </a>
       </div>

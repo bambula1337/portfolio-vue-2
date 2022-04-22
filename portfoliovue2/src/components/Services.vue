@@ -166,7 +166,7 @@ export default {
     @apply xl:mt-20;
     flex-flow: row wrap;
     & .card {
-      @apply w-36 h-52 rounded-md flex flex-col justify-evenly pl-3 mb-7;
+      @apply w-36 h-52 rounded-md flex flex-col justify-evenly pl-3 mb-7 transition-all duration-300;
       @apply smlger:w-42 h-56;
       @apply md:w-60 md:pr-5 md:h-68;
       @apply lgplus:mx-20;
@@ -178,7 +178,7 @@ export default {
         @apply lg:text-3xl;
       }
       & .text {
-        @apply text-xl;
+        @apply text-xl  transition-all duration-300;
         @apply lg:text-2xl;
       }
       & .link {

@@ -1,27 +1,63 @@
 <template>
   <div class="header">
-    <div class="main-header" :class="{'bg-dark': isDarkModeEnable}">
-      <div class="logo-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
-        <p class="logo" :class="{'text-white': isDarkModeEnable}">Adm's</p>
+    <div class="main-header" :class="{ 'bg-dark': isDarkModeEnable }">
+      <div
+        class="logo-wrapper"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        data-aos-once="true"
+      >
+        <p class="logo" :class="{ 'text-white': isDarkModeEnable }">Adm's</p>
       </div>
-      <div class="wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+      <div
+        class="wrapper"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        data-aos-once="true"
+      >
         <div class="links-wrapper">
-          <a href="#home" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
+          <a
+            href="#home"
+            v-smooth-scroll
+            class="link"
+            :class="{ 'text-white': isDarkModeEnable }"
             >Home</a
           >
-          <a href="#about" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
+          <a
+            href="#about"
+            v-smooth-scroll
+            class="link"
+            :class="{ 'text-white': isDarkModeEnable }"
             >About
           </a>
-          <a href="#skills" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
+          <a
+            href="#skills"
+            v-smooth-scroll
+            class="link"
+            :class="{ 'text-white': isDarkModeEnable }"
             >Skills</a
           >
-          <a href="#services" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
+          <a
+            href="#services"
+            v-smooth-scroll
+            class="link"
+            :class="{ 'text-white': isDarkModeEnable }"
             >Services</a
           >
-          <a href="#portfolio" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
+          <a
+            href="#portfolio"
+            v-smooth-scroll
+            class="link"
+            :class="{ 'text-white': isDarkModeEnable }"
             >Portfolio</a
           >
-          <a href="#contact" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
+          <a
+            href="#contact"
+            v-smooth-scroll
+            class="link"
+            :class="{ 'text-white': isDarkModeEnable }"
             >Contact</a
           >
         </div>
@@ -31,38 +67,64 @@
             v-if="!isDarkModeEnable"
             @click="changeMode"
           ></i>
-          <i class="uil uil-sun icon" :class="{'text-white': isDarkModeEnable}" v-else @click="changeMode"></i>
+          <i
+            class="uil uil-sun icon"
+            :class="{ 'text-white': isDarkModeEnable }"
+            v-else
+            @click="changeMode"
+          ></i>
         </div>
       </div>
     </div>
     <div class="mobile">
-      <div class="mobile-controller" :class="{'bg-dark': isDarkModeEnable}">
-        <div class="logo" :class="{'text-white': isDarkModeEnable}">Adm's</div>
+      <div class="mobile-controller" :class="{ 'bg-dark': isDarkModeEnable }">
+        <div class="logo" :class="{ 'text-white': isDarkModeEnable }">
+          Adm's
+        </div>
         <div class="menu-opener">
           <i
             class="uil uil-moon icon"
             v-if="isDarkModeEnable"
             @click="changeMode"
-            :class="{'text-white': isDarkModeEnable}"
+            :class="{ 'text-white': isDarkModeEnable }"
           ></i>
           <i class="uil uil-sun icon" v-else @click="changeMode"></i>
-          <i class="uil uil-apps icon" :class="{'text-white': isDarkModeEnable}" @click="mobileMenuOpened = true"></i>
+          <i
+            class="uil uil-apps icon"
+            :class="{ 'text-white': isDarkModeEnable }"
+            @click="mobileMenuOpened = true"
+          ></i>
         </div>
       </div>
       <div
         class="mobile-menu"
-        :class="{ 'mobile-menu-opened': mobileMenuOpened, 'bg-dark': isDarkModeEnable }"
+        :class="{
+          'mobile-menu-opened': mobileMenuOpened,
+          'bg-dark': isDarkModeEnable,
+        }"
       >
-        <a  class="card" @click="mobileMenuOpened = false" v-smooth-scroll v-for="(card, index) in mobileMenuCards" :key="index" :href="card.href">
-          <i class="uil icon" :class="[card.icon, {'text-white': isDarkModeEnable}]"></i>
-          <p class="card-text" :class="{'text-white': isDarkModeEnable}">{{ card.text }}</p>
+        <a
+          class="card"
+          @click="mobileMenuOpened = false"
+          v-smooth-scroll
+          v-for="(card, index) in mobileMenuCards"
+          :key="index"
+          :href="card.href"
+        >
+          <i
+            class="uil icon"
+            :class="[card.icon, { 'text-white': isDarkModeEnable }]"
+          ></i>
+          <p class="card-text" :class="{ 'text-white': isDarkModeEnable }">
+            {{ card.text }}
+          </p>
         </a>
         <div class="close-card" @click="mobileMenuOpened = false">
           <i class="uil uil-multiply"></i>
         </div>
       </div>
     </div>
-    <div class="scroll-to-up" :class="{'opacity-scroll': scrollByTop > 800}">
+    <div class="scroll-to-up" :class="{ 'opacity-scroll': scrollByTop > 800 }">
       <a href="#app" v-smooth-scroll>
         <i class="uil uil-arrow-up icon"></i>
       </a>
@@ -89,46 +151,46 @@ export default {
           id: 1,
           icon: "uil-estate",
           text: "Home",
-          href: "#home"
+          href: "#home",
         },
         {
           id: 2,
           icon: "uil-user",
           text: "About",
-          href: "#about"
+          href: "#about",
         },
         {
           id: 3,
           icon: "uil-file-alt",
           text: "Skills",
-          href: "#skills"
+          href: "#skills",
         },
         {
           id: 4,
           icon: "uil-bag-alt",
           text: "Services",
-          href: "#services"
+          href: "#services",
         },
         {
           id: 5,
           icon: "uil-scenery",
           text: "Portfolio",
-          href: "#portfolio"
+          href: "#portfolio",
         },
         {
           id: 6,
           icon: "uil-navigator",
           text: "Contact",
-          href: "#contact"
+          href: "#contact",
         },
       ],
     };
   },
-  mounted(){
-    window.addEventListener('scroll', () =>{
+  mounted() {
+    window.addEventListener("scroll", () => {
       this.scrollByTop = window.scrollY;
     });
-  }
+  },
 };
 </script>
 
@@ -209,30 +271,32 @@ export default {
       transform: translateY(0);
     }
   }
-  & .scroll-to-up{
+  & .scroll-to-up {
     @apply fixed right-5 bottom-19 bg-purple-600 text-white w-10 h-10 flex justify-center items-center rounded-md transition-all duration-700 opacity-0;
     z-index: 65;
     @apply lg:bottom-10;
 
-    &:hover{
-      @apply lg:pb-1.5;
+    &:hover {
+      @media (min-width: 1024px) {
+        transform: translateY(-0.5rem);
+      }
+      transform: translateY(-5px);
     }
-    & .icon{
+    & .icon {
       @apply text-2xl;
     }
-
   }
 }
 
-.darkmode{
+.darkmode {
   background-color: rgb(5, 0, 30);
   background-color: rgb(5, 0, 20);
 }
-.bg-dark{
+.bg-dark {
   background-color: rgb(5, 0, 30) !important;
 }
 
-.opacity-scroll{
+.opacity-scroll {
   opacity: 1 !important;
 }
 </style>

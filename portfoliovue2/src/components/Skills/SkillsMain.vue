@@ -1,7 +1,7 @@
 <template>
-  <div class="skills" id="skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
-    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
-    <div class="skills-main" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+  <div class="skills" id="skills">
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true" />
+    <div class="skills-main"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
       <details class="details" v-for="(card, index) in cards" :key="index">
         <summary class="summary" @click.prevent="summaryClicked">
           <div class="text-wrapper">
@@ -157,6 +157,7 @@ export default {
 <style lang="scss" scoped>
 .skills {
   @apply mb-20 flex justify-center flex-col items-center;
+
   & .skills-main {
     @apply mt-10;
     @apply smplus:flex smplus:justify-center;
