@@ -6,22 +6,22 @@
       </div>
       <div class="wrapper">
         <div class="links-wrapper">
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
+          <a href="#home" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
             >Home</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
+          <a href="#about" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
             >About
           </a>
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
+          <a href="#skills" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
             >Skills</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
+          <a href="#services" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
             >Services</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
+          <a href="#portfolio" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
             >Portfolio</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
+          <a href="#contact" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
             >Contact</a
           >
         </div>
@@ -53,17 +53,17 @@
         class="mobile-menu"
         :class="{ 'mobile-menu-opened': mobileMenuOpened, 'bg-dark': isDarkModeEnable }"
       >
-        <div class="card" v-for="(card, index) in mobileMenuCards" :key="index">
+        <a  class="card" @click="mobileMenuOpened = false" v-smooth-scroll v-for="(card, index) in mobileMenuCards" :key="index" :href="card.href">
           <i class="uil icon" :class="[card.icon, {'text-white': isDarkModeEnable}]"></i>
           <p class="card-text" :class="{'text-white': isDarkModeEnable}">{{ card.text }}</p>
-        </div>
+        </a>
         <div class="close-card" @click="mobileMenuOpened = false">
           <i class="uil uil-multiply"></i>
         </div>
       </div>
     </div>
     <div class="scroll-to-up">
-      <a href="#">
+      <a href="#app" v-smooth-scroll>
         <i class="uil uil-arrow-up icon"></i>
       </a>
     </div>
@@ -88,31 +88,37 @@ export default {
           id: 1,
           icon: "uil-estate",
           text: "Home",
+          href: "#home"
         },
         {
           id: 2,
           icon: "uil-user",
           text: "About",
+          href: "#about"
         },
         {
           id: 3,
           icon: "uil-file-alt",
           text: "Skills",
+          href: "#skills"
         },
         {
           id: 4,
           icon: "uil-bag-alt",
           text: "Services",
+          href: "#services"
         },
         {
           id: 5,
           icon: "uil-scenery",
           text: "Portfolio",
+          href: "#portfolio"
         },
         {
           id: 6,
           icon: "uil-navigator",
           text: "Contact",
+          href: "#contact"
         },
       ],
     };
@@ -203,7 +209,7 @@ export default {
     @apply lg:bottom-10;
 
     &:hover{
-      @apply pb-1.5;
+      @apply lg:pb-1.5;
     }
     & .icon{
       @apply text-2xl;

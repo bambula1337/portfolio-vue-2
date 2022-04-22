@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact" id="contact">
     <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="contact-main">
       <div class="main-info">

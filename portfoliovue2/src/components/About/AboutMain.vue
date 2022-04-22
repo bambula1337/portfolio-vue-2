@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about" id="about">
     <div class="welcome-text-wrapper">
       <WelcomeText
         :main-text="WelcomeTextProps.mainText"

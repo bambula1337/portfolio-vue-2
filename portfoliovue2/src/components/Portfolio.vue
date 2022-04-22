@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio">
+  <div class="portfolio" id="portfolio">
     <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="portfolio-main">
       <div class="slider-wrapper">

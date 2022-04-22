@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div class="skills" id="skills">
     <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="skills-main">
       <details class="details" v-for="(card, index) in cards" :key="index">

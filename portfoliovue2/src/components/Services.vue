@@ -1,5 +1,5 @@
 <template>
-  <div class="services">
+  <div class="services" id="services">
     <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="services-main">
       <div class="card" :class="{'bg-dark': isDarkMode}" v-for="(card, index) in Cards" :key="index">

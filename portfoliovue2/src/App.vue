@@ -40,6 +40,25 @@ export default {
   @apply overflow-x-hidden transition-all duration-300;
 }
 
+//Scroll Styles
+::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(139, 92, 246);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(124, 58, 237);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(109, 40, 217);
+}
+
+//Dark Mode Styles
 .bg-dark{
   background-color: rgb(5, 0, 30);
 }

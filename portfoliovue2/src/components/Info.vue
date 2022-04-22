@@ -1,5 +1,5 @@
 <template>
-  <div class="info">
+  <div class="info" id="home">
     <div class="top">
       <div class="icons">
         <a href="https://www.instagram.com/adms_dev/" target="_blank" class="icon">
