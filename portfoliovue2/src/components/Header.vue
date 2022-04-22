@@ -1,50 +1,61 @@
 <template>
   <div class="header">
-    <div class="main-header">
+    <div class="main-header" :class="{'bg-dark': isDarkModeEnable}">
       <div class="logo-wrapper">
-        <p class="logo">Adm's</p>
+        <p class="logo" :class="{'text-white': isDarkModeEnable}">Adm's</p>
       </div>
       <div class="wrapper">
         <div class="links-wrapper">
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link"
+          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
             >Home</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link"
+          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
             >About
           </a>
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link"
+          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
             >Skills</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link"
+          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
             >Services</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link"
+          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
             >Portfolio</a
           >
-          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link"
+          <a href="https://trello.com/b/j8XxYsZg/portfolio-vue2" class="link" :class="{'text-white': isDarkModeEnable}"
             >Contact</a
           >
         </div>
         <div class="mode-wrapper">
-          <i class="uil uil-moon icon"></i>
+          <i
+            class="uil uil-moon icon"
+            v-if="!isDarkModeEnable"
+            @click="changeMode"
+          ></i>
+          <i class="uil uil-sun icon" :class="{'text-white': isDarkModeEnable}" v-else @click="changeMode"></i>
         </div>
       </div>
     </div>
     <div class="mobile">
-      <div class="mobile-controller">
-        <div class="logo">Adm's</div>
+      <div class="mobile-controller" :class="{'bg-dark': isDarkModeEnable}">
+        <div class="logo" :class="{'text-white': isDarkModeEnable}">Adm's</div>
         <div class="menu-opener">
-          <i class="uil uil-moon icon"></i>
-          <i class="uil uil-apps icon" @click="mobileMenuOpened = true"></i>
+          <i
+            class="uil uil-moon icon"
+            v-if="isDarkModeEnable"
+            @click="changeMode"
+            :class="{'text-white': isDarkModeEnable}"
+          ></i>
+          <i class="uil uil-sun icon" v-else @click="changeMode"></i>
+          <i class="uil uil-apps icon" :class="{'text-white': isDarkModeEnable}" @click="mobileMenuOpened = true"></i>
         </div>
       </div>
       <div
         class="mobile-menu"
-        :class="{ 'mobile-menu-opened': mobileMenuOpened }"
+        :class="{ 'mobile-menu-opened': mobileMenuOpened, 'bg-dark': isDarkModeEnable }"
       >
         <div class="card" v-for="(card, index) in mobileMenuCards" :key="index">
-          <i class="uil icon" :class="card.icon"></i>
-          <p class="card-text">{{ card.text }}</p>
+          <i class="uil icon" :class="[card.icon, {'text-white': isDarkModeEnable}]"></i>
+          <p class="card-text" :class="{'text-white': isDarkModeEnable}">{{ card.text }}</p>
         </div>
         <div class="close-card" @click="mobileMenuOpened = false">
           <i class="uil uil-multiply"></i>
@@ -57,8 +68,15 @@
 <script>
 export default {
   name: "Header",
+  methods: {
+    changeMode: function () {
+      this.isDarkModeEnable = !this.isDarkModeEnable;
+      this.$emit("update:isDarkModeEnable", this.isDarkModeEnable);
+    },
+  },
   data() {
     return {
+      isDarkModeEnable: false,
       mobileMenuOpened: false,
       mobileMenuCards: [
         {
@@ -101,6 +119,7 @@ export default {
 .header {
   & .main-header {
     @apply hidden justify-between items-center px-20 font-poppins font-medium bg-gray-50 py-3.5;
+    @apply transition-all duration-300;
     -webkit-box-shadow: 0px -3px 13px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0px -3px 13px 5px rgba(0, 0, 0, 0.1);
     @apply lg:flex lg:w-full lg:fixed lg:top-0 lg:left-0 lg:z-70;
@@ -108,9 +127,9 @@ export default {
       & .logo {
         @apply cursor-pointer transition-all duration-300;
         @apply lgplus:text-lg;
-          &:hover{
-            @apply text-purple-600;
-          }
+        &:hover {
+          @apply text-purple-600;
+        }
       }
     }
     & .wrapper {
@@ -119,7 +138,7 @@ export default {
         & .link {
           @apply mr-7 text-sm transition-all duration-300;
           @apply lgplus:text-base lgplus:mr-10;
-          &:hover{
+          &:hover {
             @apply text-purple-600;
           }
         }
@@ -127,7 +146,7 @@ export default {
       & .mode-wrapper {
         & .icon {
           @apply cursor-pointer transition-all duration-300;
-          &:hover{
+          &:hover {
             @apply text-purple-600;
           }
         }
@@ -135,9 +154,9 @@ export default {
     }
   }
   & .mobile {
-    @apply lg:hidden;
+    @apply lg:hidden transition-all duration-300;
     & .mobile-controller {
-      @apply fixed items-center bottom-0 left-0 w-full flex justify-between bg-gray-50 px-1/20 py-2 z-70;
+      @apply fixed items-center bottom-0 left-0 w-full flex justify-between bg-gray-50 px-1/20 py-2 z-70 transition-all duration-500;
       -webkit-box-shadow: 0px 10px 13px -7px #00000075,
         0px 7px 18px 10px rgba(0, 0, 0, 0.1);
       box-shadow: 0px 10px 13px -7px #00000075,
@@ -173,5 +192,13 @@ export default {
       transform: translateY(0);
     }
   }
+}
+
+.darkmode{
+  background-color: rgb(5, 0, 30);
+  background-color: rgb(5, 0, 20);
+}
+.bg-dark{
+  background-color: rgb(5, 0, 30) !important;
 }
 </style>

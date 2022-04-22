@@ -1,12 +1,14 @@
 <template>
   <div class="contact">
-    <WelcomeText v-bind="WelcomeTextProps" />
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="contact-main">
       <div class="main-info">
         <div class="info-card" v-for="(card, index) in InfoCards" :key="index">
           <i class="uil icon" :class="card.icon"></i>
           <div class="card-text">
-            <p class="main-text">{{ card.mainText }}</p>
+            <p class="main-text" :class="{ 'text-white': isDarkMode }">
+              {{ card.mainText }}
+            </p>
             <p class="sub-text">{{ card.subText }}</p>
           </div>
         </div>
@@ -16,16 +18,23 @@
           class="form-card"
           v-for="(card, index) in Form.inputs"
           :key="index"
+          :class="{ 'input-bg-dark': isDarkMode }"
         >
           <p class="card-text">{{ card.text }}</p>
-          <input :type="card.type" class="card-input" v-model="card.Vmodel" />
+          <input
+            :type="card.type"
+            class="card-input"
+            :class="{ 'input-bg-dark': isDarkMode }"
+            v-model="card.Vmodel"
+          />
         </div>
-        <div class="form-textarea">
+        <div class="form-textarea" :class="{ 'input-bg-dark': isDarkMode }">
           <p class="textarea-text">{{ Form.textArea.text }}</p>
           <textarea
             :value="Form.textArea.Vmodel"
             @input="(event) => (Form.textArea.Vmodel = event.target.value)"
             class="textarea"
+            :class="{ 'input-bg-dark': isDarkMode }"
             maxlength="200"
           ></textarea>
         </div>
@@ -49,6 +58,7 @@ export default {
   components: {
     WelcomeText,
   },
+  props: ["isDarkMode"],
   data() {
     return {
       WelcomeTextProps: {
@@ -127,7 +137,7 @@ export default {
         & .card-text {
           @apply ml-2.5;
           & .main-text {
-            @apply font-semibold;
+            @apply font-semibold transition-all duration-300;
             @apply lg:text-lg;
           }
           & .sub-text {
@@ -138,10 +148,10 @@ export default {
       }
     }
     & .main-form {
-      @apply flex flex-col font-poppins mt-14;
+      @apply flex flex-col font-poppins mt-14 transition-all duration-300;
       @apply smplus:mt-0;
       & .form-card {
-        @apply mb-7 pl-3 py-3 rounded-md;
+        @apply mb-7 pl-3 py-3 rounded-md transition-all duration-300;
         background-color: rgb(236, 232, 255);
         & .card-text {
           @apply text-sm text-gray-500;
@@ -158,7 +168,7 @@ export default {
       }
     }
     & .form-textarea {
-      @apply mb-2 pl-3 py-3 rounded-md;
+      @apply mb-2 pl-3 py-3 rounded-md transition-all duration-300;
       background-color: rgb(236, 232, 255);
       & .textarea-text {
         @apply text-sm text-gray-500;
@@ -196,5 +206,10 @@ export default {
       }
     }
   }
+}
+
+.input-bg-dark {
+  background-color: rgb(5, 0, 60) !important;
+  color: white !important;
 }
 </style>

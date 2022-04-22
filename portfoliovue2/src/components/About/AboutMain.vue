@@ -4,6 +4,7 @@
       <WelcomeText
         :main-text="WelcomeTextProps.mainText"
         :sub-text="WelcomeTextProps.subText"
+        :isDarkMode="isDarkMode"
       />
     </div>
     <div class="about-main">
@@ -21,7 +22,7 @@
             v-for="(card, index) in StatCards"
             :key="index"
           >
-            <div class="card-number">{{ numberFixer(card.number) }}</div>
+            <div class="card-number" :class="{'text-white': isDarkMode}">{{ numberFixer(card.number) }}</div>
             <div class="card-text">{{ card.text }}</div>
           </div>
         </div>
@@ -44,6 +45,7 @@ export default {
   components: {
     WelcomeText,
   },
+  props: ['isDarkMode'],
   methods: {
     numberFixer: function (number) {
       if (number < 10 && number > 0) {
@@ -123,7 +125,7 @@ export default {
           @apply flex flex-col items-center text-center w-3/10;
           @apply smlger:w-2/10;
           & .card-number {
-            @apply font-poppins font-semibold text-2xl;
+            @apply font-poppins font-semibold text-2xl transition-all duration-300;
             @apply lg:text-3xl;
           }
           & .card-text {

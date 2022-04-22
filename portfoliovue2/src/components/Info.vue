@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="bottom">
-      <p class="main-text">Hi, I'm Adm's</p>
+      <p class="main-text" :class="{'text-white': isDarkMode}">Hi, I'm Adm's</p>
       <p class="sub-text">Front-end developer</p>
       <p class="text">
         High level experience in web design and development knowledge, producing
@@ -62,6 +62,7 @@
 <script>
 export default {
   name: "Info",
+  props: ['isDarkMode'],
 };
 </script>
 
@@ -107,7 +108,7 @@ export default {
     @apply lg:w-80 lg:-ml-16 -mr-24;
     @apply xl:w-90 xl:mt-10 xl:-mr-40;
     & .main-text {
-      @apply text-3xl font-semibold;
+      @apply text-3xl font-semibold transition-all duration-300;
       @apply lg:text-4xl;
       @apply xl:text-6xl xl:w-100;
     }

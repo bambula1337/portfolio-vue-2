@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div class="project" :class="{'bg-dark': isDarkMode}">
     <div class="project-info">
       <p class="main-text">You have a new project</p>
       <p class="sub-text">
@@ -19,12 +19,13 @@
 <script>
 export default {
   name: "Project",
+  props: ['isDarkMode'],
 };
 </script>
 
 <style lang="scss" scoped>
 .project {
-  @apply mb-20 bg-purple-600 font-poppins text-white flex flex-col pt-10;
+  @apply mb-20 bg-purple-600 font-poppins text-white flex flex-col pt-10 transition-all duration-300;
   @apply md:flex-row md:justify-evenly;
 
   & .project-info {
@@ -65,5 +66,8 @@ export default {
       @apply xl:w-80;
     }
   }
+}
+.bg-dark{
+  background-color: rgb(5, 0, 60) !important;
 }
 </style>

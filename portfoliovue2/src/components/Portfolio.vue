@@ -1,10 +1,10 @@
 <template>
   <div class="portfolio">
-    <WelcomeText v-bind="WelcomeTextProps" />
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="portfolio-main">
       <div class="slider-wrapper">
-        <SliderMain/>
-        <Slider />
+        <SliderMain :isDarkMode="isDarkMode"/>
+        <Slider/>
       </div>
     </div>
   </div>
@@ -22,6 +22,7 @@ export default {
     SliderMain,
     Slider,
   },
+  props: ['isDarkMode'],
   data() {
     return {
       WelcomeTextProps: {

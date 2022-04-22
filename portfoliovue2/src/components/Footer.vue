@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer" :class="{'bg-dark': isDarkMode}">
     <div class="main-footer">
       <div class="main-text-wrapper">
         <p class="main-text">Adm's</p>
@@ -45,12 +45,13 @@
 <script>
 export default {
   name: "Footer",
+  props: ['isDarkMode'],
 };
 </script>
 
 <style lang="scss" scoped>
 .footer {
-  @apply bg-purple-600 pb-20 pt-7 font-poppins text-white px-5;
+  @apply bg-purple-600 pb-20 pt-7 font-poppins text-white px-5 transition-all duration-300;
   @apply lg:pb-5;
   @apply smlger:px-10;
   & .main-footer {
@@ -105,5 +106,9 @@ export default {
       @apply lg:text-base;
     }
   }
+}
+
+.bg-dark{
+  background-color: rgb(5, 0, 50) !important;
 }
 </style>

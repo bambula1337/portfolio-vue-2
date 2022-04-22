@@ -1,7 +1,7 @@
 <template>
   <div class="sliderMain" id="projects">
     <i class="uil uil-angle-left-b icon" @click='arrowPrev'></i>
-    <Slider :ProjectName="Slider.ProjectName" :Slides="Slider.urls" :IntervalTime="Slider.IntervalTime" :IntervalAbility="Slider.IntervalAbility" :bus='eventBus' />
+    <Slider :ProjectName="Slider.ProjectName" :Slides="Slider.urls" :IntervalTime="Slider.IntervalTime" :IntervalAbility="Slider.IntervalAbility" :bus='eventBus' :isDarkMode="isDarkMode" />
     <i class="uil uil-angle-right-b icon" @click='arrowNext'></i>
   </div>
 </template>
@@ -13,6 +13,7 @@ import Vue from "vue";
 
 export default {
   name: "SliderMain",
+  props: ['isDarkMode'],
   components: {
     Slider,
   },

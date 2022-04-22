@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
-    <Header/>
+  <div id="app" :class="{'bg-dark': isDarkModeEnable}">
+    <Header :isDarkModeEnable.sync="isDarkModeEnable"/>
     <div class="main">
-      <router-view />
+      <router-view :isDarkMode="isDarkModeEnable"/>
     </div>
-    <Footer/>
+    <Footer :isDarkMode="isDarkModeEnable"/>
   </div>
 </template>
 
@@ -18,6 +18,11 @@ export default {
     Header,
     Footer,
   },
+  data(){
+    return{
+      isDarkModeEnable: false,
+    }
+  }
 };
 </script>
 
@@ -32,7 +37,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 #app {
-  @apply overflow-x-hidden;
+  @apply overflow-x-hidden transition-all duration-300;
 }
 
+.bg-dark{
+  background-color: rgb(5, 0, 30);
+}
 </style>

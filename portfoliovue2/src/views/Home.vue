@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <Info/>
-    <About/>
-    <Skills/>
-    <Services/>
-    <Portfolio/>
-    <Project/>
-    <Contact/>
+    <Info :isDarkMode="isDarkMode"/>
+    <About :isDarkMode="isDarkMode"/>
+    <Skills :isDarkMode="isDarkMode"/>
+    <Services :isDarkMode="isDarkMode"/>
+    <Portfolio :isDarkMode="isDarkMode"/>
+    <Project :isDarkMode="isDarkMode"/>
+    <Contact :isDarkMode="isDarkMode"/>
   </div>
 </template>
 
@@ -30,6 +30,7 @@ export default {
     Portfolio,
     Project,
     Contact
-  }
+  },
+  props: ['isDarkMode'],
 };
 </script>

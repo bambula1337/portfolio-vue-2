@@ -4,7 +4,7 @@
       <div class="wrapper">
         <img class="bgImg" :src="urlStartingFromAssets(slideImgSrc)" alt="" />
         <div class="about-project-wrapper">
-          <p class="main-text">{{ mainText }}</p>
+          <p class="main-text" :class="{'text-white-dark': isDarkMode}">{{ mainText }}</p>
           <p class="sub-text">{{ subText }}</p>
           <a :href="projectURL" target="_blank">
             <button class="demo-button">
@@ -29,6 +29,7 @@ export default {
     "mainText",
     "subText",
     "projectURL",
+    "isDarkMode",
   ],
   methods: {
     urlStartingFromAssets: function (url) {
@@ -50,7 +51,7 @@ export default {
     @apply font-poppins;
     @apply md:ml-5 md:flex md:flex-col md:justify-between md:-mt-2;
     & .main-text {
-      @apply text-xl font-semibold my-4;
+      @apply text-xl font-semibold my-4 transition-all duration-300;
       @apply md:w-52;
       @apply lg:text-2xl;
       @apply lgplus:w-68;
@@ -139,5 +140,9 @@ export default {
   to {
     transform: translateX(-100%);
   }
+}
+
+.text-white-dark{
+  color: white !important;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="services">
-    <WelcomeText v-bind="WelcomeTextProps" />
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="services-main">
-      <div class="card" v-for="(card, index) in Cards" :key="index">
+      <div class="card" :class="{'bg-dark': isDarkMode}" v-for="(card, index) in Cards" :key="index">
         <i class="uil icon" :class="card.icon"></i>
-        <p class="text">
+        <p class="text" :class="{'text-white': isDarkMode}">
           {{ card.text }}
         </p>
         <div
@@ -23,12 +23,12 @@
       @click="closeModal"
       :class="[Modal.isOpened ? 'flex' : 'hidden']"
     >
-      <div class="modal-card">
+      <div class="modal-card" :class="{'bg-dark': isDarkMode}">
         <div class="top">
-          <p class="text">
+          <p class="text" :class="{'text-white': isDarkMode}">
             <span v-html="Modal.mainText"></span>
           </p>
-          <i class="uil uil-multiply icon" @click="closeModal"></i>
+          <i class="uil uil-multiply icon" @click="closeModal" :class="{'text-white-on-hover': isDarkMode}"></i>
         </div>
         <div class="bottom">
           <div
@@ -53,6 +53,7 @@ export default {
   components: {
     WelcomeText,
   },
+  props: ['isDarkMode'],
   methods: {
     openModal: function (text, abilities) {
       this.Modal.isOpened = true;
@@ -261,6 +262,15 @@ export default {
   }
   to {
     transform: translateY(0rem);
+  }
+}
+
+.bg-dark{
+  background-color: rgb(5, 0, 50) !important;
+}
+.text-white-on-hover{
+  &:hover{
+    color: white !important;
   }
 }
 </style>

@@ -1,13 +1,13 @@
 <template>
   <div class="skills">
-    <WelcomeText v-bind="WelcomeTextProps" />
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
     <div class="skills-main">
       <details class="details" v-for="(card, index) in cards" :key="index">
         <summary class="summary" @click.prevent="summaryClicked">
           <div class="text-wrapper">
             <i class="uil icon" :class="card.summary.icon"></i>
             <div class="text">
-              <p class="main-text">{{ card.summary.mainText }}</p>
+              <p class="main-text" :class="{'text-white': isDarkMode}">{{ card.summary.mainText }}</p>
               <p class="sub-text">{{ card.summary.subText }}</p>
             </div>
           </div>
@@ -22,7 +22,7 @@
             :key="index"
           >
             <div class="card-text">
-              <p class="text">{{ card.text }}</p>
+              <p class="text" :class="{'text-white-dark': isDarkMode}">{{ card.text }}</p>
               <hr class="line" />
             </div>
           </div>
@@ -53,6 +53,7 @@ export default {
       }
     },
   },
+  props: ['isDarkMode'],
   data() {
     return {
       clickedCard: null,
@@ -200,7 +201,7 @@ export default {
           & .text {
             @apply flex flex-col ml-2;
             & .main-text {
-              @apply text-lg font-semibold;
+              @apply text-lg font-semibold transition-all duration-300;
               @apply lg:text-xl;
               @apply xl:text-2xl;
             }
@@ -227,7 +228,7 @@ export default {
           & .card-text {
             @apply mt-2;
             & .text {
-              @apply font-poppins font-medium;
+              @apply font-poppins font-medium transition-all duration-300;
               @apply lg:text-lg lg:font-semibold lg:text-gray-700;
             }
             & .line {
@@ -248,5 +249,9 @@ export default {
   100% {
     max-height: 2000px;
   }
+}
+
+.text-white-dark{
+  color: white !important;
 }
 </style>

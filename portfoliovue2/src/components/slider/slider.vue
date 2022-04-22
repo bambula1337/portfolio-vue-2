@@ -25,6 +25,7 @@
             :currentSlideID="currentSlideID"
             :index="index"
             :effect="animation.name"
+            :isDarkMode="isDarkMode"
           />
         </div>
         <div class="sliderDots">
@@ -119,7 +120,7 @@ export default {
     this.bus.$on('arrowPrev', this.prev);
     this.bus.$on('arrowNext', this.next);
   },
-  props: ["ProjectName", "Slides", "IntervalAbility", "IntervalTime", "bus"],
+  props: ["ProjectName", "Slides", "IntervalAbility", "IntervalTime", "bus", "isDarkMode"],
   data() {
     return {
       slides: [...this.Slides],

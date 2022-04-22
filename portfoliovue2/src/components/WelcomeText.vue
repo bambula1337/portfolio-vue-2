@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-text">
-    <p class="main-text">{{ mainText }}</p>
+    <p class="main-text" :class="{'text-white': isDarkMode}">{{ mainText }}</p>
     <p class="sub-text">{{ subText }}</p>
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
   name: "WelcomeTextComponent",
-  props: ["mainText", "subText"],
+  props: ["mainText", "subText", 'isDarkMode'],
 };
 </script>
 
@@ -16,7 +16,7 @@ export default {
 .welcome-text{
   @apply flex flex-col justify-center text-center;
   & .main-text{
-    @apply text-3xl font-poppins font-semibold;
+    @apply text-3xl font-poppins font-semibold transition-all duration-300;
     @apply lg:text-4xl;
     @apply xl:text-4.5xl;
   }
