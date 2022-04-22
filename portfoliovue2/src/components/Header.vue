@@ -190,6 +190,13 @@ export default {
     window.addEventListener("scroll", () => {
       this.scrollByTop = window.scrollY;
     });
+
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      this.isDarkModeEnable = true;
+    }
   },
 };
 </script>

@@ -31,6 +31,9 @@ export default {
           window.scrollTo(0, 0);
         }, 1000);
       }
+      if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+        this.isDarkModeEnable = true;
+      }
     };
   },
   data() {
