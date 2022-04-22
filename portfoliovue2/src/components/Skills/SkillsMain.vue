@@ -176,6 +176,7 @@ export default {
 
       &:not([open]) {
         max-height: 3em;
+        @apply xl:max-h-16;
       }
 
       &[open] {

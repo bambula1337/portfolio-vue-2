@@ -62,6 +62,11 @@
         </div>
       </div>
     </div>
+    <div class="scroll-to-up">
+      <a href="#">
+        <i class="uil uil-arrow-up icon"></i>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -191,6 +196,19 @@ export default {
     & .mobile-menu-opened {
       transform: translateY(0);
     }
+  }
+  & .scroll-to-up{
+    @apply fixed right-5 bottom-19 bg-purple-600 text-white w-10 h-10 flex justify-center items-center rounded-md transition-all duration-300;
+    z-index: 65;
+    @apply lg:bottom-10;
+
+    &:hover{
+      @apply pb-1.5;
+    }
+    & .icon{
+      @apply text-2xl;
+    }
+
   }
 }
 
