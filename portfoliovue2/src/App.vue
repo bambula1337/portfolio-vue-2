@@ -1,28 +1,44 @@
 <template>
-  <div id="app" :class="{'bg-dark': isDarkModeEnable}">
-    <Header :isDarkModeEnable.sync="isDarkModeEnable"/>
-    <div class="main">
-      <router-view :isDarkMode="isDarkModeEnable"/>
+  <div id="app" :class="{ 'bg-dark': isDarkModeEnable }">
+    <div class="loader" :class="{ loaded: isLoaded }" v-if="!isLoaded">
+      <DoubleBounce />
     </div>
-    <Footer :isDarkMode="isDarkModeEnable"/>
+    <Header :isDarkModeEnable.sync="isDarkModeEnable" v-if="isLoaded" />
+    <div class="main" v-if="isLoaded">
+      <router-view :isDarkMode="isDarkModeEnable" />
+    </div>
+    <Footer :isDarkMode="isDarkModeEnable" v-if="isLoaded" />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
-import Footer from '@/components/Footer.vue';
+import Footer from "@/components/Footer.vue";
+import { DoubleBounce } from "vue-loading-spinner";
 
 export default {
   name: "App",
   components: {
     Header,
     Footer,
+    DoubleBounce,
   },
-  data(){
-    return{
+  mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState == "complete") {
+        setTimeout(() => {
+          this.isLoaded = true;
+          window.scrollTo(0, 0);
+        }, 1000);
+      }
+    };
+  },
+  data() {
+    return {
       isDarkModeEnable: false,
-    }
-  }
+      isLoaded: false,
+    };
+  },
 };
 </script>
 
@@ -31,10 +47,10 @@ export default {
 @import "./assets/style/tailwind.scss";
 
 //Icons
-@import 'https://unicons.iconscout.com/release/v4.0.0/css/line.css';
+@import "https://unicons.iconscout.com/release/v4.0.0/css/line.css";
 
 //Fonts
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 #app {
   @apply overflow-x-hidden transition-all duration-300;
@@ -59,7 +75,17 @@ export default {
 }
 
 //Dark Mode Styles
-.bg-dark{
+.bg-dark {
   background-color: rgb(5, 0, 30);
+}
+
+//Loader
+.loader {
+  @apply w-screen h-screen flex justify-center items-center;
+}
+
+.loaded {
+  width: 0 !important;
+  height: 0 !important;
 }
 </style>
