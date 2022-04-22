@@ -1,6 +1,6 @@
 <template>
   <div class="about" id="about">
-    <div class="welcome-text-wrapper">
+    <div class="welcome-text-wrapper" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
       <WelcomeText
         :main-text="WelcomeTextProps.mainText"
         :sub-text="WelcomeTextProps.subText"
@@ -8,10 +8,10 @@
       />
     </div>
     <div class="about-main">
-      <div class="top">
+      <div class="top" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
         <img src="@/assets/images/about/girl.jpg" class="image" alt="" />
       </div>
-      <div class="bottom">
+      <div class="bottom" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
         <p class="text">
           Web developer with extensive knowledge and year of experience, working
           with web technologies and design, delivering quality work.

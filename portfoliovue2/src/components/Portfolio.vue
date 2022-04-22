@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio" id="portfolio">
-    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
-    <div class="portfolio-main">
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true" />
+    <div class="portfolio-main" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
       <div class="slider-wrapper">
         <SliderMain :isDarkMode="isDarkMode"/>
         <Slider/>

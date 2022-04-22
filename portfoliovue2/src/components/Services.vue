@@ -1,7 +1,7 @@
 <template>
   <div class="services" id="services">
-    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
-    <div class="services-main">
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true" />
+    <div class="services-main" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true"> 
       <div class="card" :class="{'bg-dark': isDarkMode}" v-for="(card, index) in Cards" :key="index">
         <i class="uil icon" :class="card.icon"></i>
         <p class="text" :class="{'text-white': isDarkMode}">

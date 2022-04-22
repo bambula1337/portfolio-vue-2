@@ -1,10 +1,10 @@
 <template>
   <div class="header">
     <div class="main-header" :class="{'bg-dark': isDarkModeEnable}">
-      <div class="logo-wrapper">
+      <div class="logo-wrapper" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
         <p class="logo" :class="{'text-white': isDarkModeEnable}">Adm's</p>
       </div>
-      <div class="wrapper">
+      <div class="wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
         <div class="links-wrapper">
           <a href="#home" v-smooth-scroll class="link" :class="{'text-white': isDarkModeEnable}"
             >Home</a
@@ -62,7 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="scroll-to-up">
+    <div class="scroll-to-up" :class="{'opacity-scroll': scrollByTop > 800}">
       <a href="#app" v-smooth-scroll>
         <i class="uil uil-arrow-up icon"></i>
       </a>
@@ -83,6 +83,7 @@ export default {
     return {
       isDarkModeEnable: false,
       mobileMenuOpened: false,
+      scrollByTop: 0,
       mobileMenuCards: [
         {
           id: 1,
@@ -123,6 +124,11 @@ export default {
       ],
     };
   },
+  mounted(){
+    window.addEventListener('scroll', () =>{
+      this.scrollByTop = window.scrollY;
+    });
+  }
 };
 </script>
 
@@ -204,7 +210,7 @@ export default {
     }
   }
   & .scroll-to-up{
-    @apply fixed right-5 bottom-19 bg-purple-600 text-white w-10 h-10 flex justify-center items-center rounded-md transition-all duration-300;
+    @apply fixed right-5 bottom-19 bg-purple-600 text-white w-10 h-10 flex justify-center items-center rounded-md transition-all duration-700 opacity-0;
     z-index: 65;
     @apply lg:bottom-10;
 
@@ -224,5 +230,9 @@ export default {
 }
 .bg-dark{
   background-color: rgb(5, 0, 30) !important;
+}
+
+.opacity-scroll{
+  opacity: 1 !important;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="project" :class="{'bg-dark': isDarkMode}">
-    <div class="project-info">
+    <div class="project-info" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
       <p class="main-text">You have a new project</p>
       <p class="sub-text">
         Contact me now and get a 30% discount on your project.
@@ -10,7 +10,7 @@
         <i class="uil uil-navigator icon"></i>
       </button>
     </div>
-    <div class="image-wrapper">
+    <div class="image-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
       <img class="image" src="@/assets/images/project/girl.png" alt="" />
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="info" id="home">
+  <div class="info" id="home" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
     <div class="top">
       <div class="icons">
         <a href="https://www.instagram.com/adms_dev/" target="_blank" class="icon">
@@ -12,7 +12,7 @@
           <i class="uil uil-github-alt icon"></i>
         </a>
       </div>
-      <div class="image">
+      <div class="image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
         <svg
           viewBox="0 0 200 187"
           xmlns="http://www.w3.org/2000/svg"

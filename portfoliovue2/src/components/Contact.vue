@@ -1,8 +1,8 @@
 <template>
   <div class="contact" id="contact">
-    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
+    <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true" />
     <div class="contact-main">
-      <div class="main-info">
+      <div class="main-info" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
         <div class="info-card" v-for="(card, index) in InfoCards" :key="index">
           <i class="uil icon" :class="card.icon"></i>
           <div class="card-text">

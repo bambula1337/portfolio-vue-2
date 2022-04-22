@@ -1,7 +1,7 @@
 <template>
-  <div class="skills" id="skills">
+  <div class="skills" id="skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
     <WelcomeText v-bind="WelcomeTextProps" :isDarkMode="isDarkMode" />
-    <div class="skills-main">
+    <div class="skills-main" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
       <details class="details" v-for="(card, index) in cards" :key="index">
         <summary class="summary" @click.prevent="summaryClicked">
           <div class="text-wrapper">
