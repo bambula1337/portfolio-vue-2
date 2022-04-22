@@ -50,12 +50,12 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(124, 58, 237);
+  background-color: rgba(91, 33, 182);
   border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(109, 40, 217);
+  background-color: rgb(76, 29, 149);
 }
 
 //Dark Mode Styles
